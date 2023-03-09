@@ -1,8 +1,8 @@
 theme = "hyde"
 
-base_url = "https://zola-hyde.netlify.com"
+base_url = "/some-article"
 compile_sass = true
-title = "Nic Docker"
+title = "NIC DOCKER"
 description = "Welcome to my site"
 generate_feed = true
 
@@ -11,8 +11,8 @@ hyde_sticky = true
 hyde_reverse = false
 hyde_theme = ""
 hyde_links = [
-    {url = "/", name = "Portfolio"},
-    {url = "/", name = "Blog"},
+    {url = "/portfolio", name = "PORTFOLIO"},
+    {url = "/blog", name = "BLOG"},
 ]
 
 [markdown]
