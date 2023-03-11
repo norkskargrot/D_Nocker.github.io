@@ -9,6 +9,8 @@ tags = ["Pico8", "Playable Demo", "Ongoing WIP"]
 +++
 Built in the Pico8 engine, this project was an experiment in 3d terrain rendering from scratch.
 
+### Playable Demo:
+Use the mouse to rotate the view, and the arrow keys to move.
 <iframe class= "pico8player" src="/portfolio/pico8terrain/walker.html"... ></iframe>
 
 After reading about the voxel-space terrain rendering in the game Comanche: Maximum overkill (1992), I was keen to create my own implementation in Pico8. This projects was the result, and continues to be expanded far beyond the original implementation.
