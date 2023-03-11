@@ -72,7 +72,8 @@ html {
 }
 
 .fullwidth {
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   text-align: center;
   display: flex;
   align-items: center;
