@@ -11,7 +11,7 @@ hyde_sticky = true
 hyde_reverse = false
 hyde_theme = ""
 hyde_links = [
-    {url = "/portfolio", name = "GAMES"},
+    {url = "/games", name = "GAMES"},
     {url = "/", name = "UI/UX DESIGN"},
     {url = "/", name = "DRAWING"},
     {url = "/blog", name = "BLOG"},

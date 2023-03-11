@@ -1,10 +1,10 @@
 +++
 title = "Grappleball"
-date = 2019-11-27
+weight = 1
 description = "This project was an exploration of a physics-based movement system and a continuation of my interest in procedural animation."
 template = "page.html"
 [extra]
-headerimage = "/portfolio/grappleball/grappleball.png"
+headerimage = "/games/grappleball/grappleball.png"
 tags = ["Unity", "Project Incomplete"]
 +++
 
