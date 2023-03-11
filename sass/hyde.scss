@@ -173,7 +173,6 @@ html {
   }
 }
 
-
 @media (min-width: 48em) {
   .content {
     max-width: 38rem;
@@ -189,6 +188,66 @@ html {
   }
 }
 
+// Other custom elements
+
+.postimage {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.headerimage {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  image-rendering: pixelated;
+}
+
+.pico8player {
+  width: 100%;
+  aspect-ratio: 640 / 512;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.imagewithinpost {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tags-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.tags-item {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  background-color: #dddddd;
+  border-radius: 0.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.more-info-container {
+  padding-top: 0.5rem;
+  text-align: right;
+}
+
+.hyperlink {
+  color: #202020;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  text-decoration-thickness: 1px;
+}
 
 /*
  * Reverse layout

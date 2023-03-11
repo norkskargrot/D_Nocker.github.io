@@ -1,6 +1,6 @@
 theme = "hyde"
 
-base_url = "https://norkskargrot.github.io"
+base_url = "https://norkskargrot.github.io/"
 compile_sass = true
 title = "NIC DOCKER"
 description = "Game Development and other experiments"
@@ -11,7 +11,10 @@ hyde_sticky = true
 hyde_reverse = false
 hyde_theme = ""
 hyde_links = [
-    {url = "/portfolio", name = "PORTFOLIO"},
+    {url = "/portfolio", name = "GAMES"},
+    {url = "/", name = "UI/UX DESIGN"},
+    {url = "/", name = "DRAWING"},
+    {url = "/", name = "PHOTOGRAPHY"},
     {url = "/blog", name = "BLOG"},
     {url = "https://twitter.com/D_Nocker", name = "TWITTER"},
 ]

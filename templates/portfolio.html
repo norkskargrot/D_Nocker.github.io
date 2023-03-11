@@ -1,18 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="posts">
+<div class="content container">
+  <div class="posts">
     {% for page in section.pages | reverse %}
       <div class="post">
-        <img src="{{ page.extra.imageSource }}">
+        <img class="postimage" src="{{ page.extra.headerimage }}">
         <h1 class="post-title">
           <a href="{{ page.permalink }}">
             {{ page.title | safe }}
           </a>
         </h1>
+        <div class="tags-container">
+          {% for tag in page.extra.tags  %}
+            <div class="tags-item">
+              {{ tag }}
+            </div>
+          {% endfor %}
+        </div>
+        {{ page.description }}
 
-        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+        <div class="more-info-container">
+          <a class="hyperlink" href="{{ page.permalink }}"> More info > </a>
+        </div>
+        
       </div>
     {% endfor %}
+  </div>
 </div>
 {% endblock content %}
