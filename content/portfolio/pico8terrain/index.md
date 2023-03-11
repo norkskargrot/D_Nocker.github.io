@@ -5,7 +5,7 @@ description = "Built in the Pico8 engine, this project was an experiment in 3d t
 template = "page.html"
 [extra]
 headerimage = "/portfolio/pico8terrain/walker.png"
-tags = ["Pico8", "Playable Demo"]
+tags = ["Pico8", "Playable Demo", "Ongoing WIP"]
 +++
 Built in the Pico8 engine, this project was an experiment in 3d terrain rendering from scratch.
 

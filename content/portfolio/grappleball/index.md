@@ -5,7 +5,7 @@ description = "This project was an exploration of a physics-based movement syste
 template = "page.html"
 [extra]
 headerimage = "/portfolio/grappleball/image.JPG"
-tags = ["Unity"]
+tags = ["Unity", "Project Incomplete"]
 +++
 
 This project was originally begun as an entry for the Boss Rush Gamejam, but sadly the game was not completed beyond the unique character controller and procedural environment seen here.
