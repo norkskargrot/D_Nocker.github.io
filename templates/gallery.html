@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="content container" >
+    <div class="gallery">
+      {% for asset in section.assets %}
+          {% set image = resize_image(path=asset, height=400, op="fit_height") %}
+          <a href="{{ get_url(path=asset) }}" target="_blank">
+            <img class="galleryImage" src="{{ image.url }}" />
+          </a>
+      {% endfor %}
+    </div>    
+  </div>
+{% endblock content %}

@@ -5,7 +5,7 @@ description = "This project was a prototype for a unique spellcrafting system, w
 template = "page.html"
 [extra]
 headerimage = "/games/minimage/minimage.png"
-tags = ["Pico8", "Playable Demo", "Ongoing WIP"]
+tags = ["Pico8", "Playable Demo", "WIP"]
 +++
 This project was a prototype for a unique spellcrafting system, where a player is given immense control over the magic available to them.
 
