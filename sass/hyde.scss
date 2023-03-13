@@ -31,6 +31,7 @@
  * Update the foundational and global aspects of the page.
  */
 
+
 html {
   font-family: Lato,"PT Sans", Helvetica, Arial, sans-serif;
 }
@@ -157,6 +158,10 @@ html {
  * with a 25%-wide `.sidebar`.
  */
 
+.container {
+  max-width: none;
+}
+
 .content {
   padding-top:    4rem;
   padding-bottom: 4rem;
@@ -166,7 +171,7 @@ html {
   body:not(.layout-reverse) .content {
       // Notch is to right of content text; pad it appropriately
       padding-right: m#{a}x(1rem, env(safe-area-inset-right));
-  }
+  } 
 
   .layout-reverse .content {
       // Notch is to left of content text; pad it appropriately
@@ -176,7 +181,7 @@ html {
 
 @media (min-width: 48em) {
   .content {
-    max-width: 38rem;
+    max-width: 50rem;
     margin-left: 20rem;
     margin-right: 2rem;
   }
@@ -188,6 +193,7 @@ html {
     margin-right: 4rem;
   }
 }
+
 
 // Other custom elements
 
