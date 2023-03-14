@@ -3,7 +3,7 @@ theme = "hyde"
 base_url = "https://nic.dockerz.net"
 compile_sass = true
 title = "NIC DOCKER"
-description = "Game Development and other experiments"
+description = "Game development and other experiments"
 generate_feed = true
 
 [extra]
