@@ -33,7 +33,7 @@
 
 
 html {
-  font-family: Lato,"PT Sans", Helvetica, Arial, sans-serif;
+  font-family: Raleway,"PT Sans", Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48em) {
   html {
@@ -88,13 +88,13 @@ html {
   text-decoration: none;
 }
 
-/* About section */
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: Lato, sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-weight: 300;
-  font-size: 3.25rem;
+  font-size: 5rem;
+  line-height: 90%;
 }
 .sidebar-about h1:hover {
   color: #949494;
@@ -214,6 +214,7 @@ html {
   aspect-ratio: 640 / 512;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  border:none;
 }
 
 .imagewithinpost {
