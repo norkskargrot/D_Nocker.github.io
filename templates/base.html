@@ -15,9 +15,7 @@
       <link rel="stylesheet" href="{{ get_url(path="poole.css", trailing_slash=false) }}">
       <link rel="stylesheet" href="{{ get_url(path="hyde.css", trailing_slash=false) }}">
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap" rel="stylesheet">
-
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
       {% if config.generate_feed %}
         <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
       {% endif %}
@@ -32,7 +30,10 @@
                 <div class="container {% if config.extra.hyde_sticky %}sidebar-sticky{% endif %}">
                     <div class="sidebar-about">
                         {% block sidebar_about %}
-                            <a href="{{ config.base_url }}"><h1>{{ config.title }}</h1></a>
+                            <div class="siteTitle">
+                              <a href="{{ config.base_url }}">{{ config.title }}</a>
+                              <img src="/images/arrow.svg" style="width: 100%;">
+                            </div>
                             {% if config.description %}
                             <p class="lead">{{config.description}}</p>
                             {% endif %}
@@ -44,6 +45,11 @@
                         {% for link in config.extra.hyde_links %}
                         <li class="sidebar-nav-item"><a href="{{link.url}}">{{link.name}}</a></li>
                         {% endfor %}
+                        <div class="sidebarLinkIconGroup">
+                          <a href="https://twitter.com/D_Nocker"><img class="sidebarLinkIcon" src="/images/twitter.svg"></a>
+                          <a href="https://github.com/norkskargrot"><img class="sidebarLinkIcon" src="/images/github.svg"></a>
+                          <a href="https://www.linkedin.com/in/nicdocker/"><img class="sidebarLinkIcon" src="/images/linkedin.svg"></a>
+                        </div>
                         {% endblock sidebar_nav %}
                     </ul>
                 </div>

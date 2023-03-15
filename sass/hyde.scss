@@ -33,17 +33,33 @@
 
 
 html {
-  font-family: Raleway,"PT Sans", Helvetica, Arial, sans-serif;
+  font-family: Raleway, "PT Sans", Helvetica, Arial, sans-serif;
 }
+
 @media (min-width: 48em) {
   html {
     font-size: 16px;
   }
 }
+
 @media (min-width: 58em) {
   html {
     font-size: 20px;
   }
+}
+
+body {
+  background-color: #202020;
+  color: #FFE8C5;
+}
+
+h1 {
+  color: #FFE8C5;
+  margin-top: 0;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 300;
+  font-size: 4rem;
+  line-height: 90%;
 }
 
 /*
@@ -54,10 +70,9 @@ html {
  */
 
 .sidebar {
+  background-color: #202020;
   text-align: center;
   padding: 2rem 1rem;
-  color: rgba(255,255,255,.5);
-  background-color: #202020;
 }
 
 @media (min-width: 48em) {
@@ -71,55 +86,65 @@ html {
   }
 }
 
-.fullwidth {
-  width: 100vw;
-  height: 100vh;
-  text-align: center;
-  display: flex;
-  align-items: center;
-}
-
 /* Sidebar links */
 .sidebar a {
-  color: #fff;
+  color: #FFE8C5;
 }
 
 .sidebar a:hover {
   text-decoration: none;
 }
 
-.sidebar-about h1 {
-  color: #fff;
+.siteTitle {
+  color: #FFE8C5;
   margin-top: 0;
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 300;
-  font-size: 5rem;
+  font-size: 6rem;
   line-height: 90%;
 }
-.sidebar-about h1:hover {
-  color: #949494;
+
+.siteTitle:hover {
+  opacity: 70%;
 }
 
 .sidebar-about p {
-  font-size: 1.1rem;
+  color: #FFE8C5;
+  font-size: 1rem;
 }
 
 /* Sidebar nav */
 .sidebar-nav {
   padding-left: 0;
   font-size: 1.2rem;
+  font-weight: 400;
   list-style: none;
 }
+
 .sidebar-nav-item {
   display: block;
-  padding-bottom: 10px;
 }
+
 .sidebar-nav-item a:hover {
-  color: #949494;
+  opacity: 70%;
 }
-.sidebar-nav-item.active {
-  font-weight: bold;
+
+.sidebarLinkIconGroup {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
 }
+
+.sidebarLinkIcon {
+  width: 1.5rem;
+  height: auto;
+}
+
+.sidebarLinkIcon:hover {
+  opacity: 70%;
+}
+
 
 /* Sticky sidebar
  *
@@ -130,22 +155,22 @@ html {
 @media (min-width: 48em) {
   .sidebar-sticky {
     position: absolute;
-    right:  1rem;
+    right: 1rem;
     bottom: 1rem;
-    left:   1rem;
+    left: 1rem;
   }
 
   // The #{} stuff is needed because of https://github.com/sass/sass/issues/2378
   @supports(padding: m#{a}x(0px)) {
     body:not(.layout-reverse) .sidebar-sticky {
-        // Notch is to left of sidebar; pad appropriately
-        padding-left: m#{a}x(1rem, env(safe-area-inset-left));
+      // Notch is to left of sidebar; pad appropriately
+      padding-left: m#{a}x(1rem, env(safe-area-inset-left));
     }
 
     .layout-reverse .sidebar-sticky {
-        // Support iPhone X rounded corners and notch in landscape
-        // Notch is to right of sidebar; pad appropriately
-        padding-right: m#{a}x(1rem, env(safe-area-inset-right));
+      // Support iPhone X rounded corners and notch in landscape
+      // Notch is to right of sidebar; pad appropriately
+      padding-right: m#{a}x(1rem, env(safe-area-inset-right));
     }
   }
 }
@@ -162,19 +187,19 @@ html {
 }
 
 .content {
-  padding-top:    4rem;
+  padding-top: 4rem;
   padding-bottom: 4rem;
 }
 
 @supports(padding: m#{a}x(0px)) {
   body:not(.layout-reverse) .content {
-      // Notch is to right of content text; pad it appropriately
-      padding-right: m#{a}x(1rem, env(safe-area-inset-right));
-  } 
+    // Notch is to right of content text; pad it appropriately
+    padding-right: m#{a}x(1rem, env(safe-area-inset-right));
+  }
 
   .layout-reverse .content {
-      // Notch is to left of content text; pad it appropriately
-      padding-left: m#{a}x(1rem, env(safe-area-inset-left));
+    // Notch is to left of content text; pad it appropriately
+    padding-left: m#{a}x(1rem, env(safe-area-inset-left));
   }
 }
 
@@ -194,42 +219,31 @@ html {
 }
 
 
-// Other custom elements
+/* Posts */
+.post {
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #FFE8C5;
+}
+
+.post-title {
+  color: #FFE8C5;
+}
+
+.post-title a {
+  color: #FFE8C5;
+  text-decoration: none;
+}
+
+.post-title a:hover {
+  opacity: 70%;
+  text-decoration: none;
+}
 
 .postimage {
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
-}
-
-.headerimage {
-  width: 100%;
-  height: 40vh;
-  object-fit: cover;
-  image-rendering: pixelated;
-}
-
-.pico8player {
-  width: 100%;
-  aspect-ratio: 640 / 512;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border:none;
-}
-
-.imagewithinpost {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.videoplayercontainer {
-  padding:62.5% 0 0 0;
-  position: relative;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
 .tags-container {
@@ -244,7 +258,9 @@ html {
   padding-right: 0.5rem;
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
-  background-color: #dddddd;
+  outline-style: solid;
+  outline-color: #FFE8C5;
+  outline-width: 1px;
   border-radius: 0.2rem;
   text-transform: uppercase;
   font-weight: 600;
@@ -257,14 +273,49 @@ html {
 }
 
 .hyperlink {
-  color: #202020;
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
-  text-decoration-thickness: 1px;
+  color: #FFE8C5;
+  text-decoration: none;
 }
 
+.hyperlink:hover {
+  opacity: 70%;
+  text-decoration: none;
+}
+
+.headerimage {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  image-rendering: pixelated;
+}
+
+.pico8player {
+  width: 100%;
+  aspect-ratio: 640 / 512;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+}
+
+.imagewithinpost {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.videoplayercontainer {
+  padding: 62.5% 0 0 0;
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+// Gallery
+
 .gallery {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   column-gap: 1rem;
   row-gap: 0rem;
@@ -277,7 +328,7 @@ html {
 
 .galleryImage {
   width: 100%;
-  margin-bottom:0rem;
+  margin-bottom: 0rem;
   object-fit: cover;
 }
 
@@ -298,6 +349,7 @@ html {
     left: auto;
     right: 0;
   }
+
   .layout-reverse .content {
     margin-left: 2rem;
     margin-right: 20rem;
@@ -326,6 +378,7 @@ html {
 .theme-base-08 .sidebar {
   background-color: #ac4142;
 }
+
 .theme-base-08 .content a,
 .theme-base-08 .related-posts li a:hover {
   color: #ac4142;
@@ -335,6 +388,7 @@ html {
 .theme-base-09 .sidebar {
   background-color: #d28445;
 }
+
 .theme-base-09 .content a,
 .theme-base-09 .related-posts li a:hover {
   color: #d28445;
@@ -344,6 +398,7 @@ html {
 .theme-base-0a .sidebar {
   background-color: #f4bf75;
 }
+
 .theme-base-0a .content a,
 .theme-base-0a .related-posts li a:hover {
   color: #f4bf75;
@@ -353,6 +408,7 @@ html {
 .theme-base-0b .sidebar {
   background-color: #90a959;
 }
+
 .theme-base-0b .content a,
 .theme-base-0b .related-posts li a:hover {
   color: #90a959;
@@ -362,6 +418,7 @@ html {
 .theme-base-0c .sidebar {
   background-color: #75b5aa;
 }
+
 .theme-base-0c .content a,
 .theme-base-0c .related-posts li a:hover {
   color: #75b5aa;
@@ -371,6 +428,7 @@ html {
 .theme-base-0d .sidebar {
   background-color: #6a9fb5;
 }
+
 .theme-base-0d .content a,
 .theme-base-0d .related-posts li a:hover {
   color: #6a9fb5;
@@ -380,6 +438,7 @@ html {
 .theme-base-0e .sidebar {
   background-color: #aa759f;
 }
+
 .theme-base-0e .content a,
 .theme-base-0e .related-posts li a:hover {
   color: #aa759f;
@@ -389,6 +448,7 @@ html {
 .theme-base-0f .sidebar {
   background-color: #8f5536;
 }
+
 .theme-base-0f .content a,
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;

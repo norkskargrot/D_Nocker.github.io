@@ -1,9 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <img class="headerimage" src="{{ page.extra.headerimage }}">
   <div class="content container">
     <h1 class="post-title">{{ page.title }}</h1>
+    <div class="tags-container">
+      {% for tag in page.extra.tags  %}
+        <div class="tags-item">
+          {{ tag }}
+        </div>
+      {% endfor %}
+    </div>
     {{ page.content | safe }}
   </div>
 {% endblock content %}
