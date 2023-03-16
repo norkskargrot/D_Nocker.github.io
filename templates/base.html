@@ -28,10 +28,10 @@
 
     <body class="{{ config.extra.hyde_theme }} {% if config.extra.hyde_reverse %}layout-reverse{% endif %}">
         {% block sidebar %}
-          <span class="smallsidebar">
+          <span class="show-in-mobile">
             {{ macros::smallSidebar() }}
           </span>
-          <span class="largesidebar">
+          <span class="show-in-desktop">
             {{ macros::defaultSidebar() }}
           </span>
         {% endblock sidebar %}

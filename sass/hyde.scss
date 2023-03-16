@@ -42,7 +42,7 @@ html {
   }
 }
 
-@media (min-width: 58em) {
+@media (min-width: 68em) {
   html {
     font-size: 20px;
   }
@@ -72,30 +72,36 @@ h1 {
 .sidebar {
   background-color: #202020;
   text-align: left;
+  position: fixed;
+  padding: 2rem 1rem 2rem 1rem;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 18rem;
+}
+
+.sidebarsmall {
+  background-color: #202020;
+  text-align: left;
   padding: 2rem 1rem 0rem 1rem;
 }
 
-.smallsidebar {
+.sidebarsmall .siteTitle {
+  font-size: 3rem;
+}
+
+.show-in-mobile {
   display:inline-block;
 }
-.largesidebar {
+.show-in-desktop {
   display:none;
 }
 
 @media (min-width: 48em) {
-  .sidebar {
-    position: fixed;
-    padding: 2rem 1rem 2rem 1rem;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 18rem;
-    text-align: left;
-  }
-  .smallsidebar {
+  .show-in-mobile {
     display:none;
   }
-  .largesidebar {
+  .show-in-desktop {
     display:inline-block;
   }
 }
@@ -117,10 +123,6 @@ h1 {
   font-size: 6rem;
   line-height: 90%;
   display: inline-block;
-}
-
-.smallsidebar .siteTitle {
-  font-size: 3rem;
 }
 
 .siteTitle:hover {
