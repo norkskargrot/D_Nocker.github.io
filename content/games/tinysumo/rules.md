@@ -1,5 +1,5 @@
 +++
-title = "Tiny Sumo"
+title = "Tiny Sumo Rules"
 weight = 1
 description = "Inspired by various board game design challenges online where participants created games with minimal rules or minimal components, I created this game to fit on a single playing card, to act as a business card of sorts for myself."
 template = "page.html"
