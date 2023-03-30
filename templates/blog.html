@@ -12,7 +12,7 @@
           </a>
         </h1>
 
-        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+        <span class="post-date">{{ page.date | date(format="%d-%m-%Y") }}</span>
         <div class="tags-container">
           {% for tag in page.extra.tags  %}
             <div class="tags-item">
