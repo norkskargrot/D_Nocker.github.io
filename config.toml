@@ -13,7 +13,7 @@ hyde_theme = ""
 hyde_links = [
     {url = "/games", name = "GAMES"},
     {url = "/art", name = "ART"},
-    {url = "/", name = "BLOG"},
+    {url = "/blog", name = "BLOG"},
 ]
 
 [markdown]
