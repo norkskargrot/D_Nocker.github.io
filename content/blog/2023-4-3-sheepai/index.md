@@ -90,7 +90,7 @@ Initially I investigated creating invisible colliders around these obstacles whi
 
 I then investigated sampling the terrain data for this information, using the slope of the terrain to determine whether an area was walkable or not, but this was a significant performance overhead for each sheep each frame.
 
-Finally, a much easier was found. By using the unity navmesh system, but not using the navmesh agent component, the sheep can still be controlled according to the boid (and other) forces, but can cast rays through the navmesh, rather than in the 3D physics environment. This means that all obstacle data can be managed by the navmesh, rather than colliders in the environment. Here you can see how the navmesh (in blue) looks on our rolling hills terrain.
+Finally, a much easier solution was found. By using the unity navmesh system, but not using the navmesh agent component, the sheep can still be controlled according to the boid (and other) forces, but can cast rays through the navmesh, rather than in the 3D physics environment. This means that all obstacle data can be managed by the navmesh, rather than colliders in the environment. Here you can see how the navmesh (in blue) looks on our rolling hills terrain.
 
 <img class = smallimagewithinpost src="/blog/2023-4-3-sheepai/navmesh.png"> 
 
