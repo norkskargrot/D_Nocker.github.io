@@ -9,8 +9,10 @@ tags = ["Pico8", "Playable Demo", "WIP"]
 +++
 This project was a prototype for a unique spellcrafting system, where a player is given immense control over the magic available to them.
 
-### Playable Demo:
+## Playable Demo:
+
 Controls;
+
 - Use the arrow keys to move
 - Press each of the two action buttons ("Z" and "X" on pc, or the onscreen "O" and "X" buttons on mobile) to use your two equipped spells.
 - Press the two action buttons simultaneously to open the spellcrafting menu and change your equipped spells. More details on how spellcrafting works below.

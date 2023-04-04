@@ -56,8 +56,6 @@ body {
 h1 {
   color: #FFE8C5;
   margin-top: 0;
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 300;
   font-size: 4rem;
   line-height: 90%;
 }
@@ -328,6 +326,15 @@ img {
   margin-right: auto;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.smallimagewithinpost {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
 }
 
 .videoplayercontainer {

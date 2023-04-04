@@ -9,7 +9,7 @@ tags = ["Pico8", "Playable Demo", "WIP"]
 +++
 Built in the Pico8 engine, this project was an experiment in 3d terrain rendering from scratch.
 
-### Playable Demo:
+## Playable Demo:
 Use the mouse to rotate the view, and the arrow keys to move.
 <iframe class= "pico8player" src="/games/pico8terrain/walker.html"... ></iframe>
 
