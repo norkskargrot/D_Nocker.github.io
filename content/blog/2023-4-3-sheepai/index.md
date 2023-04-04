@@ -10,7 +10,7 @@ tags = ["Unity", "Shepherd's Crook", "AI"]
 
 <img class = imagewithinpost src="/blog/2023-4-3-sheepai/sheep.png">
 
-Some of my friends and I have begun work on a game themed around Icelandic Shepherding, a peaceful experience where the player wanders the landscape finding and gathering their sheep. The first step i've taken in this project is to create a robust sheep AI which can provide all of the behaviour the sheep in the game will need.
+Some of my friends and I have begun work on a game themed around Icelandic Shepherding, a peaceful experience where the player wanders the landscape finding and gathering their sheep. The first step i've taken in this project is to create a robust sheep AI which can provide all of the behavior the sheep in the game will need.
 
 ## High-level structure
 
@@ -101,6 +101,6 @@ I hadn't before considered using the navmesh in this way, rather than the conven
 
 All of this leaves us with lovely sheep herding behavior, and we can watch sheep intelligently herd in complex environments which successfully avoiding obstacles.
 
-<div class="videoplayercontainer"><iframe src="https://player.vimeo.com/video/814451951?h=8bcb273195&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Screencast from 04-04-23 11:32:44.webm"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div class="youtubevideoplayer"><iframe width='100%' height='100%' src="https://www.youtube.com/embed/DGNgJEUMtnw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
 
 There is much more to do, however. The sheep shouldn't be always moving and roaming about but instead stop to graze and relax, and then run to avoid predators when they arise, or when they are being herded. I will create a second part to this post, expanding on the behavior of these sheep.
