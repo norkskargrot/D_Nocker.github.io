@@ -1,34 +1,66 @@
 +++
-title = "Tiny Sumo Rules"
+title = "Tiny Sumo Demo"
 weight = 1
-description = "Inspired by various board game design challenges online where participants created games with minimal rules or minimal components, I created this game to fit on a single playing card, to act as a business card of sorts for myself."
 template = "page.html"
 [extra]
 headerimage = "/games/tinysumo/Header.png"
 tags = ["Board Game", "Completed"]
 +++
 
-Inspired by various board game design challenges online where participants created games with minimal rules or minimal components, I created a game which would fit on a single playing card, to act as a business card of sorts for myself.
+Welcome to the Tiny Sumo Play Demo! While it is intended for the entire game to be able to be learnt from the rules presented on the card back itself, an example of play is provided here to assist understanding.
 
-### Self-Imposed Requirements
-- The game should fit on a single playing card, with the board on one side and the rules on the other. No external resources should be required for someone to learn to play the game.
-- The game is allowed to require additional components for the playing of the game itself, but they should be standard components which most board gamers have easy access to.
-- The game should be quick to play (5-15 minutes) but have some depth, requiring some strategic thinking while playing.
+## SETUP
 
-### The Final Product
-The two sides of the game board, one showing the board which the game is played on and the other the rules:
-<img class = imagewithinpost src="/games/tinysumo/bothsides.png">
+<img class = imagewithinpost style="margin-bottom: 0.5rem" src="/games/tinysumo/demo1.png">
 
-### The Gameplay
-I would recommend playing the game before reading this section if you can, but no pressure.
+Here is the game setup and ready to play, you can see that the fighter markers are in position on the starting dots and the round marker is in place. You can use anything you have lying around as markers whether that is coins, a pen cap, or a meeple. Additionally, each player has taken bid die and four appropriately coloured dice are set aside to be the action pool.
 
-I am quite happy with how the game plays, though with a few caveats. From the beginning I knew that the idea of a competitive duelling game appealed to me, and to facilitate this a dice-drafting mechanic felt appropriate. This is where players roll a shared dice pool and take turns selecting dice from it. This mechanic was relatively simple to explain and, when managed carefully, allowed for great strategic depth, forcing players to make difficult decisions about which dice to prioritise and which to allow their opponent to have.
+Throughout this demo, we will play as player 1 with the blue fighter, while the red fighter will be our opponent. Keep in mind that the colour of the pawn has no effect on gameplay and is just to differentiate the two.
 
-The mechanic of players pushing each other back and forth also turned out to be a great decision, as it creates and sense of drama when a player is near the edge and fighting against a loss, or when a good round pushes a player all the way across the board. Initially some versions were tested where the board was a two-dimensional grid which players could move around, but this added needless complexity for little strategic benefit.
+## PLAY
 
-One aspect of the gameplay which I would like to explore improvements to in the future is the difficulty. While the game rules are simple, at many points in the game players can find themselves in a brain melting logic puzzle, where a single decision has a long string of consequences that must be considered, resulting in a win or a loss. This can be a good thing; one of the goals set out initially was to create a strategically deep game, but it can also be a lot to consider, particularly for a first-time player. I would love to find a way to include an easy-mode or similar, where the current game remains as-is but there is also an option for a strategically simpler experience.
+<img class = imagewithinpost style="margin-bottom: 0.5em" src="/games/tinysumo/demo2.png">
 
-### The Process
-This game went through many iterations in the game's design, the layout and graphic design of the card, and finally in the rules clarity. With the constraints I had laid out for myself these three normally more separated elements became closely interlinked, as rules changes would mean more or less space would be required for rules on the card, and vice versa. Rules writing and the design of the game became a tightly interlinked back-and forth until it approached a happy state.
+Here each player has taken their bid die, and the shared action die have been rolled. In this round the throw die (in blue) is high, where all of the other die are fairly low.
 
-Rules clarity was a significant issue also. With initial versions of the game many playtesters had trouble learning to play without assistance from the card back alone, and many iterations were required to resolve this. I believe there is still room for improvement on this front, and more cleverly phrased rules could assist with new players understanding.
+<img class = imagewithinpost style="margin-bottom: 0.5rem" src="/games/tinysumo/demo3.png">
+
+Because this round has relatively low numbers in the action pool (and no 6s!), we secretly selected a 6 on our bid die, concealed from our opponent. This means our opponent will likely have a lower number, winning the bid and becoming the initiator, but we will have the highest value action die.
+
+<img class = imagewithinpost style="margin-bottom: 0.5rem" src="/games/tinysumo/demo4.png">
+
+Both players now simultaneously reveal their action die, and our bet was a success! As we predicted, our opponent bid a low value to become the initiator. This means they get priority on taking dice from the action pool, but we have the higher value die.
+
+<img class = imagewithinpost style="margin-bottom: 0.5rem" src="/games/tinysumo/demo5.png">
+
+Our opponent, as the initiator, assigns their bid die first and decided to assign it to their grab action. We assign our die to our grab action also.
+
+<img class = imagewithinpost style="margin-bottom: 0.5rem" src="/games/tinysumo/demo6.png">
+
+Our opponent now gets to take a die from the action pool first, as they are the initiator. They take the highest value die, the blue die, and have to add it to the matching coloured action, throw.
+
+<img class = imagewithinpost style="margin-bottom: 0.5rem" src="/games/tinysumo/demo7.png">
+
+It's now our turn to take a die from the action pool. Let's take the white die which rolled a 3. Because it's a white die, we can assign it to any of our actions. Let's put it on dodge.
+
+<img class = imagewithinpost style="margin-bottom: 0.5rem" src="/games/tinysumo/demo8.png">
+
+The rest of the dice are now taken, in turns, from the action pool. First out opponent takes the red die, and has to assign it to the grab action. We then take the remaining white die and choose to assign it to the grab action.
+
+<img class = imagewithinpost style="margin-bottom: 0.5rem" src="/games/tinysumo/demo9.png">
+
+We now go forward with the actions! First is dodge. Because we have a higher dodge value than our opponent (3 against 0), we get to take the action. The dodge option is optional, but let's choose to go forward with it, swapping the fighter's positions.
+
+<img class = imagewithinpost style="margin-bottom: 0.5rem" src="/games/tinysumo/demo10.png">
+
+The next action is throw. Our opponent has a higher throw value than us so they throw us to the other side of them, pushing us closer to the edge.
+
+<img class = imagewithinpost style="margin-bottom: 0.5rem" src="/games/tinysumo/demo11.png">
+
+The final action is grab, which we have the higher value in. This means that we move both fighters two spaces in a direction of our choice. If we move both fighters to the right, we'd be pushed out of the arena, losing the match! So instead we'll move them to the left, putting our opponent closer to the edge.
+
+<img class = imagewithinpost style="margin-bottom: 0.5rem" src="/games/tinysumo/demo12.png">
+
+That's the end of round 1. We now clear both player's actions, and advance the round marker. We are ready to roll the action die to start the next round! Keep in mind, according to the round track there are only three dice in the action pool this round. This means the initiator gets a bonus die! Bid carefully.
+
+Thank you for checking out Tiny Sumo, and I hope you have as much fun playing it as I have.
