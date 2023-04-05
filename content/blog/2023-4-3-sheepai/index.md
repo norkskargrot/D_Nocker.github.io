@@ -99,7 +99,7 @@ I hadn't before considered using the navmesh in this way, rather than the conven
 
 ## The end of part one
 
-All of this leaves us with lovely sheep herding behavior, and we can watch sheep intelligently herd in complex environments which successfully avoiding obstacles.
+All of this leaves us with lovely sheep herding behavior, and we can watch sheep intelligently herd in complex environments while successfully avoiding obstacles.
 
 <div class="youtubevideoplayer"><iframe width='100%' height='100%' src="https://www.youtube.com/embed/DGNgJEUMtnw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
 
