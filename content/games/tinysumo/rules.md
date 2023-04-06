@@ -29,7 +29,7 @@ Because this round has relatively low numbers in the action pool (and no 6s!), w
 
 <img class = imagewithinpost style="margin-bottom: 0.5rem" src="/games/tinysumo/demo4.png">
 
-Both players now simultaneously reveal their action die, and our bet was a success! As we predicted, our opponent bid a low value to become the initiator. This means they get priority on taking dice from the action pool, but we have the higher value die.
+Both players now simultaneously reveal their bid die, and our bet was a success! As we predicted, our opponent bid a low value to become the initiator. This means they get priority on taking dice from the action pool, but we have the higher value die.
 
 <img class = imagewithinpost style="margin-bottom: 0.5rem" src="/games/tinysumo/demo5.png">
 
@@ -45,7 +45,7 @@ It's now our turn to take a die from the action pool. Let's take the white die w
 
 <img class = imagewithinpost style="margin-bottom: 0.5rem" src="/games/tinysumo/demo8.png">
 
-The rest of the dice are now taken, in turns, from the action pool. First out opponent takes the red die, and has to assign it to the grab action. We then take the remaining white die and choose to assign it to the grab action.
+The rest of the dice are now taken, in turns, from the action pool. First our opponent takes the red die, and has to assign it to the grab action. We then take the remaining white die and choose to assign it to the grab action.
 
 <img class = imagewithinpost style="margin-bottom: 0.5rem" src="/games/tinysumo/demo9.png">
 
