@@ -1,5 +1,5 @@
 +++
-title = "Gallery of Art Projects"
+title = "Gallery"
 sort_by = "weight"
 template = "gallery.html"
 +++
