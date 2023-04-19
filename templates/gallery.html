@@ -6,7 +6,7 @@
   <div class="content container" >
     <div class="gallery">
       {% for asset in section.assets %}
-        {% set image = resize_image(path=asset, height=400, op="fit_height") %}
+        {% set image = resize_image(path=asset, height=1000, op="fit_height") %}
           <a class="galleryImageContainer" href="{{ get_url(path=asset) }}" target="_blank">
             <img class="galleryImage" src="{{ image.url }}"/>
           </a>
