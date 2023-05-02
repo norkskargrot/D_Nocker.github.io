@@ -1,7 +1,7 @@
 +++
-title = "Positev Case Study"
+title = "Positev"
 weight = 1
-description = "A short two-week sprint, creating initial user flows and a light branding touch for a startup electric vehicle infrastructure company"
+description = "A short two-week sprint, creating initial user flows and a light branding touch for a startup electric vehicle infrastructure company."
 template = "page.html"
 [extra]
 headerimage = "/design/positev/positev.png"
@@ -10,11 +10,11 @@ tags = ["Branding", "User flows", "Wireframing"]
 
 ## Background
 
-The Positev startup is aiming to improve integration between the various discrete parts of the infrastructure involved in the rapidly growing electric vehicle market. Currently, different car manufacturers, public EV charger providers, and home charging solutions exist on different networks, with communication between them limited. Positev aims to be a foundational software layer between all of these pieces, integrating them into a single network. This would allow for cost savings for the involved companies and an improved user experience for EV drivers.
+The Positev startup aims to improve integration between the various discrete parts of the infrastructure involved in the rapidly growing electric vehicle market. Currently, car manufacturers, public EV charger providers, and home charging solutions exist on different networks, with communication between them limited. Positev is a foundational integration layer between all of these pieces, reducing cost and improving user experience for EV drivers.
 
 ## Design Engagement
 
-The two Positev founders come from an engineering background, and before looking for design input had worked primarily on backend integrations of various aspects of the EV network, without any user-facing product. The first consumer-facing aspect of the Positev vision was to create an app which integrated a parking booking and payment system with several different networks of EV chargers. This would allow EV drivers to easily locate, reserve, and pay for EV chargers, while also streamlining the parking payment system for non-EV drivers. For their first B2C product, design input was required for:
+The two Positev founders come from an engineering background, and before looking for design input worked primarily on backend integrations of various aspects of the EV network, without any user-facing product. The first B2C component of the Positev vision was to create an app which integrated a parking booking and payment system with several different networks of EV chargers. This allows EV drivers to easily locate and reserve EV chargers, while also streamlining the parking payment system for non-EV drivers. My design input was required for:
 
 - A light branding touch, to create an identity for Positev and the consumer-facing app.
 - Strong user flows, focusing on simplicity in improving the current parking payment systems.
@@ -23,19 +23,19 @@ This project was very tightly-scoped, with only a single two-week sprint of desi
 
 ## Brand Identity
 
-The Positev founders had little initial idea of the brand identity for the business, and so the branding process was begun primarily from scratch. From a moodboard of the branding and logos of other companies in the electric vehicle space, the team decided that they wanted a clean and bright brand identity, using playful colours with clean lines. They also wanted a combination logo, bringing together the company name with a pictoral mark to identify them.
+There was no existing brand identity for Positev, and so branding was begun from scratch. From a moodboard of the branding and logos of related companies, the team decided that they wanted a lighthearted and bright identity and a combination logo, bringing together the company name with a pictoral mark to identify them.
 
-I created a series of logo sketches, and then converted the team's favorite concepts to more refined digital versions:
+I created a series of logo sketches, and converted the team's favorite concepts to more refined digital versions:
 
 <img class = imagewithinpost src="/design/positev/brandsketches.png">
 <img class = imagewithinpost src="/design/positev/digitallogos.png">
 
-The final decision was made by the founders to move forward with the dark-mode background and green primary colour, combined with the pictoral mark of the car and charge cable combination.
+The final decision by the founders was to move forward with the dark-mode background and green primary colour, combined with the pictoral mark of the car and charge cable combination.
 <img class = smallimagewithinpost src="/design/positev/positev.png">
 
 ## User Flows
 
-The user flows were initially discussed in an exploration session with the Positev founders. The key focus of these flows was to create an interface which required minimal learning from the user. No user wants to waste mental energy learning to use a parking system, particularly one replacing a system they are already very familiar with. From this exploration session I created three initial user flows.
+The user flows were initially discussed in an exploration session with the founders. The key focus of these flows was to require minimal learning from the user. No user wants to spend mental energy learning to use a new parking system. From this exploration session I created three initial user flows.
 
 <img class = imagewithinpost src="/design/positev/userflows.png">
 

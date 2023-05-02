@@ -12,6 +12,7 @@ hyde_reverse = false
 hyde_theme = ""
 hyde_links = [
     {url = "/games", name = "GAMES"},
+    {url = "/design", name = "DESIGN"},
     {url = "/art", name = "SKETCHBOOK"},
     {url = "/blog", name = "BLOG"},
 ]
