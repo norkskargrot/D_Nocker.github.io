@@ -42,13 +42,13 @@ This is looking entirely illegible, so how did it get to this point?
 
 ## The Vision
 
-Since the 'tline' function had been added to Pico8, I have been wanting to create something that uses it's potential. This function allows drawing textured lines from the map data, with dramatically faster performance than other methods for creating the same effect. Some of the most practical uses for I have seen of this is for 2d sprite rotation, textured polygon drawing, and mode7-style plane rendering, for floors and roofs with a distinct 3d appearance. On hearing about the Tweet-tweet jam, a challenge to create a game in 500 characters of code, I took this as an opportunity to explore.
+Since the 'tline' function had been added to Pico8, I have been wanting to create something that uses it's potential. This function allows drawing textured lines from the map data, with dramatically faster performance than you might expect from Pico8. Some of the most practical uses I have seen of this is for 2d sprite rotation, textured polygon drawing, and mode7-style plane rendering, for floors and roofs with a distinct 3d appearance. On hearing about the Tweet-Tweet Jam, a challenge to create a game in 500 characters of code, I took this as an opportunity to explore.
 
 ## Making some noise
 
-Before we can draw some lovely 3d clouds or land, however, we need an image to draw. In my previous Pico8-projects I have created noise for terrain shapes or clouds via a number of methods, including placing random points and blurring them, placing points and bilinearly sampling between them, trig function based 'plasma', and more. All of these were far too large for the code size limitations, however, so I took an easy fallback: drawing plenty of randomly placed circles.
+Before we can draw some 3d clouds or land, we need an image to draw. In my previous Pico8-projects I have created noise for terrain shapes or clouds via a number of methods, including placing random points and blurring them, placing points and bilinearly sampling between them, trig function based 'plasma', and more. All of these were far too large for the code size limitations, however, so I took an easy fallback: drawing plenty of randomly placed circles.
 
-Then, to improve the look of the final image to be drawn, I wanted a second color. This would become the light edge highlight on the clouds, and the sandy shores on the ground's islands. To achieve this, after drawing the circles, I then draw the whole spritesheet onto itself in a second colour, with a slight offset.
+To improve the look of the final image to be drawn, I wanted to add a second color. This would become the light edge highlight on the clouds, and the sandy shores on the ground's islands. To achieve this, after drawing the circles, I then draw the whole spritesheet onto itself in a second colour, with a slight offset.
 
 Using tline also requires that our data to be drawn exists in the map data, rather than just the sprite sheet, so with the following code we both draw our circles and put our sprites into the map data.
 
@@ -73,7 +73,7 @@ poke(0x5F55,0x60) -- Reset the draw state to draw into the screen instead of the
 poke2(0x5F38,0x1010) -- Set the tiling used by tline, so that the map repeats every 16 tiles
 ```
 
-This creates this lovely generated image which the rest of the graphics rely on. This texture doesn't tile, but fixing that took up far too many bytes of code for me to worry about it. The colours we can fix later.
+This creates this lovely generated image which the rest of the graphics rely on. This texture doesn't tile, but fixing that took up far too many bytes of code for me to worry about it. The colours we will pallette-swap into something more sensible later.
 
 <img class = smallimagewithinpost src="/blog/2023-5-18-500-byte-flightsim/noise.png">
 
@@ -130,7 +130,7 @@ end
 pal() -- Reset the draw palette
 ```
 
-Initially I looped through this twice, once to draw the clouds and a second time to draw the ground, but as i played around with the movement, I realised something interesting. If you kept drawing past the horizon line, the view would "flip", as p became negative. This would flip the drawing of the lines, effectively creating a second plane of clouds below the first. The issue was, as the player's z coordinate changed both planes would appear to approach or recede together, braking the illusion of moving between two planes. This can be seen in this gif:
+Initially I looped through this twice, once to draw the clouds and a second time to draw the ground, but as I played around with the movement, I realised something interesting. If you kept drawing past the horizon line, the view would "flip", as p became negative. This would flip the drawing of the lines, effectively creating a second plane of clouds below the first. The issue was, as the player's z coordinate changed both planes would appear to approach or recede together, braking the illusion of moving between two planes. This can be seen in this gif:
 
 <img class = smallimagewithinpost src="/blog/2023-5-18-500-byte-flightsim/doubleclouds.gif"> 
 
@@ -142,7 +142,7 @@ The illusion still breaks entirely if the player leaves the vertical boundaries 
 
 <img class = smallimagewithinpost src="/blog/2023-5-18-500-byte-flightsim/breakingverticalbounries.gif"> 
 
-From here a lot of the above drawing logic can be squeezed down and simplified using common algebra which, combined with some of the code-shrinking techniques described above, results in the following code for drawing the environment:
+From here a lot of the above drawing logic can be squeezed down and simplified with just algebra which, combined with some of the code-shrinking techniques described above, results in the following code for drawing the environment:
 
 ```lua
 s=sin(a)c=cos(a)k=z
@@ -153,9 +153,9 @@ p=k/(h-i)*32tline(0,i,q,i,x-p*c-p*s,y+p*s-p*c,p*c>>6,-p*s>>6)end
 
 ## Starting Soaring
 
-The clear next step is giving the player an interesting way to traverse this environment, it is meant to be a game after all. I liked the idea of gliding mechanics, as flying seemed like the best way to provide vertical mobility, showing off the best parts of the environment rendering. I also personally thought it would be more interesting than powered plane flight.
+The clear next step is giving the player an interesting way to traverse this environment; it's meant to be a game after all. I liked the idea of gliding mechanics, as flying seemed like the best way to provide vertical mobility, showing off the best parts of the environment rendering. I also personally thought it would be more interesting than powered plane flight.
 
-My original vision for the game was to be first-person, as while I thought it would be better as a third-person game, I was skeptical I would have code space left to draw a character. This turned out to be wrong as i continued to squeeze down the character count, which i am very pleased about. A side effect of this is that the controls actually work as though it's a first person game, with the view rotating about the camera, effectively also moving the player also, rather than it rotating about the player. This saves on characters and isn't noticeable in the final product unless you look for it.
+My original vision for the game was to be first-person, as while I thought it would be better as a third-person game, I was skeptical I would have code space left to draw a character. This turned out to be wrong as I continued to squeeze down the character count, which I am very pleased about. A side effect of this is that the controls actually work as though it's a first person game, with the view rotating about the camera, effectively also moving the player also, rather than it rotating about the player. This saves on characters and isn't noticeable in the final product unless you look for it.
 
 The expanded movement logic is as follows:
 
@@ -210,7 +210,7 @@ k=z
 
 ## Drawing a plane
 
-It was a very pleasant surprise when I realised that I would have space to include a plane, as i think it significantly improved both the look and feel of the game, even when it came at the cost of some other features like a properly tiling texture. The plane went through many iterations of visuals, with the earliest version which is close to the final product as follows:
+It was a very pleasant surprise when I realised that I would have space to include a plane, as I think it significantly improved both the look and feel of the game, even when it came at the cost of some other features like a properly tiling texture. The plane went through many iterations of visuals, with the earliest version, close to the final product, as follows:
 
 ```lua
 xd=64-g*999 -- the x-coord to draw the plane at
@@ -266,4 +266,4 @@ Previously I also included a reset if the player was flying backwards (v<0), rep
 
 <img class = smallimagewithinpost src="/blog/2023-5-18-500-byte-flightsim/plane.gif">
 
-If you got here, thanks for reading! All in all this jam was a fantastic opportunity to explore tiny sized code where every character counts, and i would highly recommend trying out a similar jam if you haven't!
+If you got here, thanks for reading! All in all this jam was a fantastic opportunity to explore tiny sized code where every character counts, and I would highly recommend trying out a similar jam if you haven't!
