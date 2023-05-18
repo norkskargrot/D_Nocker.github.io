@@ -75,7 +75,7 @@ poke2(0x5F38,0x1010) -- Set the tiling used by tline, so that the map repeats ev
 
 This creates this lovely generated image which the rest of the graphics rely on. This texture doesn't tile, but fixing that took up far too many bytes of code for me to worry about it. The colours we can fix later.
 
-<img class = smallimagewithinpost src="/blog/2023-5-18-500-byte-flightsim/noise.png"> 
+<img class = smallimagewithinpost src="/blog/2023-5-18-500-byte-flightsim/noise.png">
 
 Some changes were made to this initial generation code to squeeze down it's size from what we see above, including:
 
@@ -263,5 +263,7 @@ if(z>w)run()
 ```
 
 Previously I also included a reset if the player was flying backwards (v<0), representing a restart due to stalling, but it consumed a few valuable characters.
+
+<img class = smallimagewithinpost src="/blog/2023-5-18-500-byte-flightsim/plane.gif">
 
 If you got here, thanks for reading! All in all this jam was a fantastic opportunity to explore tiny sized code where every character counts, and i would highly recommend trying out a similar jam if you haven't!
