@@ -54,7 +54,6 @@ body {
 }
 
 h1 {
-  color: #FFE8C5;
   margin-top: 0;
   font-size: 4rem;
   line-height: 90%;
@@ -62,16 +61,6 @@ h1 {
 
 img {
   border-radius: 0;
-}
-
-.fullscreentexture {
-  z-index: 1;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-image: url("/images/paper.jpg");
-  background-size: 600px;
-  mix-blend-mode: multiply;
 }
 
 /*
@@ -117,16 +106,11 @@ img {
 }
 
 /* Sidebar links */
-.sidebar a {
-  color: #FFE8C5;
-}
-
 .sidebar a:hover {
   text-decoration: none;
 }
 
 .siteTitle {
-  color: #FFE8C5;
   margin-top: 0;
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 300;
@@ -135,12 +119,7 @@ img {
   display: inline-block;
 }
 
-.siteTitle:hover {
-  opacity: 70%;
-}
-
 .sidebar-about p {
-  color: #FFE8C5;
   font-size: 1rem;
 }
 

@@ -1,5 +1,3 @@
-theme = "hyde"
-
 base_url = "https://nic.dockerz.net"
 compile_sass = true
 title = "Nic Docker"
