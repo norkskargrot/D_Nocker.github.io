@@ -156,8 +156,13 @@ img {
   display: block;
 }
 
+.sidebar-nav-item a {
+  transition: all .2s ease-out;
+}
+
 .sidebar-nav-item a:hover {
   opacity: 70%;
+  padding-left: 0.5rem;
 }
 
 .sidebarLinkIconGroup {
@@ -170,12 +175,13 @@ img {
 .sidebarLinkIcon {
   width: 1.5rem;
   height: auto;
+  transition: all .2s ease-out;
 }
 
 .sidebarLinkIcon:hover {
   opacity: 70%;
+  transform: translateY(-0.3rem)
 }
-
 
 /* Sticky sidebar
  *
