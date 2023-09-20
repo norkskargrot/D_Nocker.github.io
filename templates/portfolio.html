@@ -4,6 +4,7 @@
 
 {% block content %}
 <div class="content container">
+  {{ section.content | safe }}
   <div class="posts">
     {% for page in section.pages %}
       <div class="post">
