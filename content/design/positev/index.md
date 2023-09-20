@@ -8,6 +8,8 @@ headerimage = "/design/positev/positev.png"
 tags = ["Branding", "User flows", "Wireframing"]
 +++
 
+<img class = imagewithinpost src="/design/positev/examplescreens.png">
+
 ## Background
 
 The Positev startup aims to improve integration between the various discrete parts of the infrastructure involved in the rapidly growing electric vehicle market. Currently, car manufacturers, public EV charger providers, and home charging solutions exist on different networks, with communication between them limited. Positev is a foundational integration layer between all of these pieces, reducing cost and improving user experience for EV drivers.
@@ -60,9 +62,15 @@ The flows could then also be simplified to allow for no user accounts, as paying
 
 The discussions of the presented user flows were positive, and I was to move forward with wireframe creation.
 
-## Wireframes
+## Wireframes and Interactive Prototype
 
 Ideally, I would have created low-fidelity wireframes without branding at this point, to take to user testing for additional data on the functionality of the user flows and the interface. Due to the very short design timelines, however, I was to move forward with branded wireframes to provide some short-term design direction for the developers.
 
 <img class = imagewithinpost src="/design/positev/qrflow.png">
 <img class = imagewithinpost src="/design/positev/nonqrflow.png">
+
+## Project Outcome
+
+This initial design sprint proved immensely valuable to the Positev startup, crucial in such an early stage of the project in two key ways:
+- The outlining of clear user flows provided direction to the engineering team, allowing them to focus front-end development on a user-facing MVP which provides a great user expereince.
+- The creation of a strong brand identity and appealing high-fidelity wireframes added an important layer of professionalism to the founder's pitch decks, helping to land funding quickly to continue development.

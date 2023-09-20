@@ -65,6 +65,13 @@ These boards were then collapsed into a presentation and a document format, for 
 
 Being an entirely new product, this project had no existing branding to work with, and so all branding and brand assets had to be created from scratch. The process of creating a new brand was driven primarily by the feedback from user testing interviewees, and there was a back and forth of the design team creating new branding ideas and assets, getting feedback, and then refining. This resulted in a striking final brand, balancing the modern and high-tech themes commonly seen in the decentralised finance ecosystem, with the trustworthy reliable tones which traditional finance institutions leverage.
 
-The decided focal element of the brand was the animated swirling flock of dots, acting as a recurring decorative element with some functional aspects within the app experience. I created this element procedurally in 3d software, allowing for a huge amount of variation in how it looked and animated throughout the app, website, advertising material, and more.
+The decided focal element of the brand was the animated swirling flock of dots, acting as a recurring decorative element with some functional aspects within the app experience. I created this element procedurally in 3d software, allowing for a huge amount of variation and customisablitiy in how it looked and animated throughout the app, website, advertising material, and more.
 
 <img class = imagewithinpost src="/design/defineobank/hifi.png">
+
+## Project Outcome
+
+The design work on this project was extremely effective in pushing such a nascent product into a reality quickly. I am particularly proud of how the product testing and wireframing:
+ - Convertied numerous ambitious ideas in a new and exciting area of fianance into a concrete product which fit into the lives of those who would actually use it.
+- Aligned the company founders and product team, helping the full team achieve clarity in an otherwise fast-moving and complicated industry.
+- Created a flexible but recognisable brand identity, immediately cementing the brand in user's minds, but with room to grow as the product does.
