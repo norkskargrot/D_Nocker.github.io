@@ -2,7 +2,7 @@
 title = "500 byte flight simulator"
 date = 2023-05-18
 description = "A flight simulator in 500 bytes of code, created for the tweet tweet jam"
-template = "blogpage.html"
+template = "page.html"
 [extra]
 headerimage = "/blog/2023-5-18-500-byte-flightsim/plane.png"
 tags = ["Pico8", "Playable Demo"]

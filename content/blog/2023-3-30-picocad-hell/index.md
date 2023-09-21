@@ -2,7 +2,7 @@
 title = "PicoCad Jam 100"
 date = 2023-03-30
 description = "I entered the PicoCAD jam, a 3d modelling competition for tiny models, and came 4th."
-template = "blogpage.html"
+template = "page.html"
 [extra]
 headerimage = "/blog/2023-3-30-picocad-hell/bridge.png"
 tags = ["Pico8", "PicoCAD", "Modelling"]

@@ -16,6 +16,9 @@
             {{ page.title | safe }}
           </a>
         </h1>
+        {% if page.date %} 
+        <span class="post-date">{{ page.date | date(format="%d-%m-%Y") }}</span>
+        {% endif %} 
         <div class="tags-container">
           {% for tag in page.extra.tags  %}
             <div class="tags-item">

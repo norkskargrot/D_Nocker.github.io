@@ -2,7 +2,7 @@
 title = "Sheep-like behavior: Part 1"
 date = 2023-04-03
 description = "I've begun working on a game themed around Icelandic Shepherds with a few friends. This first step is creating a robust controller for the sheep behavior."
-template = "blogpage.html"
+template = "page.html"
 [extra]
 headerimage = "/blog/2023-4-3-sheepai/sheep.png"
 tags = ["Unity", "Shepherd's Crook", "AI"]
