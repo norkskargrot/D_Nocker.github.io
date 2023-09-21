@@ -24,6 +24,12 @@
       <title>{% block title %}{{ config.title }}{% endblock title %}</title>
       <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
 
+      <!-- Swup for fancy page transitions -->
+      <script src="https://unpkg.com/swup@4"></script>
+      <script>
+        const swup = new Swup();
+      </script>
+
       <!-- CSS -->
       <link rel="stylesheet" href="{{ get_url(path="print.css", trailing_slash=false) }}" media="print">
       <link rel="stylesheet" href="{{ get_url(path="poole.css", trailing_slash=false) }}">
@@ -39,6 +45,8 @@
     </head>
 
     <body class="{{ config.extra.hyde_theme }} {% if config.extra.hyde_reverse %}layout-reverse{% endif %}">
+
+      <div id="swup">
         {% block sidebar %}
           <span class="show-in-mobile">
             {{ macros::smallSidebar() }}
@@ -49,6 +57,7 @@
         {% endblock sidebar %}
         {% block content %}
         {% endblock content %}
+      </div>
     </body>
 
 </html>

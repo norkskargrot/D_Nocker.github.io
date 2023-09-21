@@ -144,6 +144,11 @@ img {
   padding-left: 0.5rem;
 }
 
+.sidebar-nav-item-selected a {
+  opacity: 70%;
+  padding-left: 0.5rem;
+}
+
 .sidebarLinkIconGroup {
   padding-top: 1rem;
   display: flex;
@@ -196,13 +201,27 @@ img {
  * with a 25%-wide `.sidebar`.
  */
 
-.container {
-  max-width: none;
-}
-
 .content {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.transition-content {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: 300ms;
+}
+
+html.is-animating .transition-content {
+  opacity: 0;
+  transform: translate(5rem, 0);
+  transition-timing-function: ease-out;
+}
+
+html.is-leaving .transition-content {
+  opacity: 0;
+  transform: translate(-5rem, 0);
+  transition-timing-function: ease-in;
 }
 
 @supports(padding: m#{a}x(0px)) {

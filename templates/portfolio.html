@@ -3,37 +3,39 @@
 {% block title %} {{ section.title }} {% endblock title %}
 
 {% block content %}
-<div class="content container">
-  {{ section.content | safe }}
-  <div class="posts">
-    {% for page in section.pages %}
-      <div class="post">
-        <a href="{{ page.permalink }}">
-          <img class="postimage" src="{{ page.extra.headerimage }}">
-          <h1 class="post-title">
-        </a>
+<div class="content">
+  <div class="transition-content">
+    {{ section.content | safe }}
+    <div class="posts">
+      {% for page in section.pages %}
+        <div class="post">
           <a href="{{ page.permalink }}">
-            {{ page.title | safe }}
+            <img class="postimage" src="{{ page.extra.headerimage }}">
+            <h1 class="post-title">
           </a>
-        </h1>
-        {% if page.date %} 
-        <span class="post-date">{{ page.date | date(format="%d-%m-%Y") }}</span>
-        {% endif %} 
-        <div class="tags-container">
-          {% for tag in page.extra.tags  %}
-            <div class="tags-item">
-              {{ tag }}
-            </div>
-          {% endfor %}
-        </div>
-        {{ page.description }}
+            <a href="{{ page.permalink }}">
+              {{ page.title | safe }}
+            </a>
+          </h1>
+          {% if page.date %} 
+          <span class="post-date">{{ page.date | date(format="%d-%m-%Y") }}</span>
+          {% endif %} 
+          <div class="tags-container">
+            {% for tag in page.extra.tags  %}
+              <div class="tags-item">
+                {{ tag }}
+              </div>
+            {% endfor %}
+          </div>
+          {{ page.description }}
 
-        <div class="more-info-container">
-          <a class="hyperlink" href="{{ page.permalink }}"> More info > </a>
+          <div class="more-info-container">
+            <a class="hyperlink" href="{{ page.permalink }}"> More info > </a>
+          </div>
+          
         </div>
-        
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 </div>
 {% endblock content %}

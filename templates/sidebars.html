@@ -13,7 +13,7 @@
 
         <ul class="sidebar-nav">
             {% for link in config.extra.hyde_links %}
-                <li class="sidebar-nav-item" {% if current_path and current_path == link.url %}style="opacity: 50%; padding-left:0.5rem;"{% endif %}>
+                <li class={% if current_path and current_path == link.url %}"sidebar-nav-item-selected"{% else %}"sidebar-nav-item"{% endif %}>
                     <a href="{{link.url}}">{{link.name}}</a>
                 </li>
             {% endfor %}
