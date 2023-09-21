@@ -8,8 +8,10 @@
   <div class="posts">
     {% for page in section.pages %}
       <div class="post">
-        <img class="postimage" src="{{ page.extra.headerimage }}">
-        <h1 class="post-title">
+        <a href="{{ page.permalink }}">
+          <img class="postimage" src="{{ page.extra.headerimage }}">
+          <h1 class="post-title">
+        </a>
           <a href="{{ page.permalink }}">
             {{ page.title | safe }}
           </a>
