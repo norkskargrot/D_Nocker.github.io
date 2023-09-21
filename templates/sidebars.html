@@ -13,7 +13,9 @@
 
         <ul class="sidebar-nav">
             {% for link in config.extra.hyde_links %}
-                <li class="sidebar-nav-item"><a href="{{link.url}}">{{link.name}}</a></li>
+                <li class="sidebar-nav-item" {% if current_path and current_path == link.url %}style="opacity: 50%; padding-left:0.5rem;"{% endif %}>
+                    <a href="{{link.url}}">{{link.name}}</a>
+                </li>
             {% endfor %}
             <div class="sidebarLinkIconGroup">
                 <a href="https://twitter.com/D_Nocker"><img class="sidebarLinkIcon" src="/images/twitter.svg"></a>

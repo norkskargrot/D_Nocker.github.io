@@ -9,9 +9,9 @@ hyde_sticky = true
 hyde_reverse = false
 hyde_theme = ""
 hyde_links = [
-    {url = "/design", name = "DESIGN"},
-    {url = "/games", name = "GAMES"},
-    {url = "/blog", name = "BLOG"},
+    {url = "/design/", name = "DESIGN"},
+    {url = "/games/", name = "GAMES"},
+    {url = "/blog/", name = "BLOG"},
 ]
 
 [markdown]
