@@ -22,7 +22,7 @@ I was the sole designer on this project, working alongside a team of three engin
 
 ## Branding
 
-Initially, the team didn't have a clear idea of what the identity of this new protocol should be. The only starting point was that the team wanted it to tie into the Maverick Protocol's own branding and itentity, as they were closely tied and would frequently be seen together. To begin I ran a short brand ideation session, exploring possible directions in which the Maverick brand could be iterated on. 
+Initially, the team didn't have a clear idea of what the identity of this new protocol should be. The only starting point was that the team wanted it to tie into the Maverick Protocol's own branding and identity, as they were closely tied and would frequently be seen together. To begin I ran a short brand ideation session, exploring possible directions in which the Maverick brand could be iterated on. 
 
 The team collectively decided to push further with the references to Top Gun which Maverick was known for, as this had a lot of potential with community building and organic marketing, which we considered an essential in the world of defi. To this end, the name "Tomcat" was settled upon.
 
@@ -56,6 +56,6 @@ From these product flows, I created an interactive prototype of the entire landi
 
 ## Project Outcome
 
-Due to changes within the Maverick protocol, the market opportunity which Tomcat was planning to take advatange of in order to provide value dissapeared, and our protocol was forced to shut down. 
+Due to changes within the Maverick protocol, the market opportunity which Tomcat was planning to take advatange of in order to provide value dissapeared, and we chose to end the project. 
 
-There were several excellent outcomes of the design work completed here, however. Through this project it became clear to the team that our extensive expereince with Defi allowed us to create a strong product quickly, along with a brand to accomany that product. We were able to within just a week create a product and brand which appealed to consumers enough to begin the process of community building, and garner some attention to what we were working on.
+There were several excellent outcomes of the design work completed here, however. Through this project it became clear to the team that our extensive expereince with Defi allowed us to create a strong product quickly, along with a brand to accompany that product. We were able to within just a week create a product and brand which appealed to consumers enough to begin the process of community building, and garner some attention to what we were working on.
