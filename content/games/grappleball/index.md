@@ -1,6 +1,6 @@
 +++
 title = "Grappleball"
-weight = 1
+weight = 3
 description = "This project was an exploration of a physics-based movement system and a continuation of my interest in procedural animation."
 template = "page.html"
 [extra]
