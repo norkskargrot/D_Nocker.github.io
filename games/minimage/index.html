@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <!-- Google Analytics tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFM54NSSW0"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BFM54NSSW0');
+      </script>
+
+      <!---->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+      <title> Mini Mage </title>
+      <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+      <!-- Swup for fancy page transitions -->
+      <script src="https://unpkg.com/swup@4"></script>
+      <script>
+        const swup = new Swup();
+      </script>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="https://nic.dockerz.net/print.css" media="print">
+      <link rel="stylesheet" href="https://nic.dockerz.net/poole.css">
+      <link rel="stylesheet" href="https://nic.dockerz.net/hyde.css">
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+      
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://nic.dockerz.net/atom.xml">
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+
+      <div id="swup">
+        
+          <span class="show-in-mobile">
+            
+<div class="sidebarsmall">
+    <div style="display: flex; flex-direction: row; gap: 2rem; align-items: flex-start;">
+        <a href="https:&#x2F;&#x2F;nic.dockerz.net">
+            <img src="/images/menu.svg" style="width: 40px;">
+            <div class="siteTitle">
+                <a href="https:&#x2F;&#x2F;nic.dockerz.net">Nic Docker</a>
+                <img src="/images/arrow.svg" style="width: 0; min-width: 100%;">
+            </div>
+        </a>
+    </div>
+</div>
+
+          </span>
+          <span class="show-in-desktop">
+            
+<div class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="sidebar-about">
+            <div class="siteTitle">
+                <a href="https:&#x2F;&#x2F;nic.dockerz.net">Nic Docker</a>
+                <img src="/images/arrow.svg" style="width: 0; min-width: 100%;">
+            </div>
+            
+            <p>I&#x27;m a designer and developer with a love for crafting engaging experiences.</p>
+            
+        </div>
+
+        <ul class="sidebar-nav">
+            
+                <li class="sidebar-nav-item">
+                    <a href="&#x2F;design&#x2F;">DESIGN</a>
+                </li>
+            
+                <li class="sidebar-nav-item">
+                    <a href="&#x2F;games&#x2F;">GAMES</a>
+                </li>
+            
+                <li class="sidebar-nav-item">
+                    <a href="&#x2F;blog&#x2F;">BLOG</a>
+                </li>
+            
+            <div class="sidebarLinkIconGroup">
+                <a href="https://twitter.com/D_Nocker"><img class="sidebarLinkIcon" src="/images/twitter.svg"></a>
+                <a href="https://github.com/norkskargrot"><img class="sidebarLinkIcon" src="/images/github.svg"></a>
+                <a href="https://www.linkedin.com/in/nicdocker/"><img class="sidebarLinkIcon" src="/images/linkedin.svg"></a>
+            </div>
+        </ul>
+    </div>
+</div>
+
+          </span>
+        
+        
+  <div class="content">
+    <div class="transition-content">
+      <h1 class="post-title">Mini Mage</h1>
+      
+      <div class="tags-container">
+        
+          <div class="tags-item">
+            Pico8
+          </div>
+        
+          <div class="tags-item">
+            Playable Demo
+          </div>
+        
+          <div class="tags-item">
+            WIP
+          </div>
+        
+      </div>
+      <p>This project was a prototype for a unique spellcrafting system, where a player is given immense control over the magic available to them.</p>
+<h2 id="playable-demo">Playable Demo:</h2>
+<p>Controls;</p>
+<ul>
+<li>Use the arrow keys to move</li>
+<li>Press each of the two action buttons (&quot;Z&quot; and &quot;X&quot; on pc, or the onscreen &quot;O&quot; and &quot;X&quot; buttons on mobile) to use your two equipped spells.</li>
+<li>Press the two action buttons simultaneously to open the spellcrafting menu and change your equipped spells. More details on how spellcrafting works below.</li>
+</ul>
+<iframe class= "pico8player" src="/games/minimage/minimage.html"... ></iframe>
+<p>I have always been interested in unique magic systems in video games, particularly those which give the player a lot of customisation over the spells which are available to them. This is my ongoing attempt to create my own system. The basic concept is that when creating a spell, players choose two basic parameters; the type and the shape.</p>
+<p>The spell's type controls the effects which the spell has. For example an earth spell will leave piles of dirt, allowing a player to create barricades, a fire spell will burn trees, buildings, and enemies, or a poison spell will create clouds of gas, damaging all who pass through it.</p>
+<p>The shape of a spell controls the form it takes when the player uses it, for example a projectile spell will be fired forward, affecting anything it hits, or leap spell will launch the player across the map, exploding wherever they land.</p>
+<p>This spellcrafting system is easy for a player to understand, but allows for fairly deep customisation in how they can interact with the game world and the enemies they encounter.</p>
+<p>The rendering of the world in this demo is also of note, as a custom isometric renderer had to be built to support the desired graphical style. This renders each tile separately, allowing for runtime modification of the map by the player, through the use of their spells.</p>
+<p>In the future I would like to add another parameter to the spellcrafting, called &quot;modifiers&quot;. These would power up or power down certain aspects of the spell, allowing for further cutomisation. This could for example include increasing the spell's range for reduced damage, or increasing it's mana cost in exchange for allowing it to pass through barriers.</p>
+
+    </div>
+  </div>
+
+      </div>
+    </body>
+
+</html>

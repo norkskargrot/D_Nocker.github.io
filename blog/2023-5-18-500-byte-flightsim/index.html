@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <!-- Google Analytics tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFM54NSSW0"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BFM54NSSW0');
+      </script>
+
+      <!---->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+      <title> 500 byte flight simulator </title>
+      <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+      <!-- Swup for fancy page transitions -->
+      <script src="https://unpkg.com/swup@4"></script>
+      <script>
+        const swup = new Swup();
+      </script>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="https://nic.dockerz.net/print.css" media="print">
+      <link rel="stylesheet" href="https://nic.dockerz.net/poole.css">
+      <link rel="stylesheet" href="https://nic.dockerz.net/hyde.css">
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+      
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://nic.dockerz.net/atom.xml">
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+
+      <div id="swup">
+        
+          <span class="show-in-mobile">
+            
+<div class="sidebarsmall">
+    <div style="display: flex; flex-direction: row; gap: 2rem; align-items: flex-start;">
+        <a href="https:&#x2F;&#x2F;nic.dockerz.net">
+            <img src="/images/menu.svg" style="width: 40px;">
+            <div class="siteTitle">
+                <a href="https:&#x2F;&#x2F;nic.dockerz.net">Nic Docker</a>
+                <img src="/images/arrow.svg" style="width: 0; min-width: 100%;">
+            </div>
+        </a>
+    </div>
+</div>
+
+          </span>
+          <span class="show-in-desktop">
+            
+<div class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="sidebar-about">
+            <div class="siteTitle">
+                <a href="https:&#x2F;&#x2F;nic.dockerz.net">Nic Docker</a>
+                <img src="/images/arrow.svg" style="width: 0; min-width: 100%;">
+            </div>
+            
+            <p>I&#x27;m a designer and developer with a love for crafting engaging experiences.</p>
+            
+        </div>
+
+        <ul class="sidebar-nav">
+            
+                <li class="sidebar-nav-item">
+                    <a href="&#x2F;design&#x2F;">DESIGN</a>
+                </li>
+            
+                <li class="sidebar-nav-item">
+                    <a href="&#x2F;games&#x2F;">GAMES</a>
+                </li>
+            
+                <li class="sidebar-nav-item">
+                    <a href="&#x2F;blog&#x2F;">BLOG</a>
+                </li>
+            
+            <div class="sidebarLinkIconGroup">
+                <a href="https://twitter.com/D_Nocker"><img class="sidebarLinkIcon" src="/images/twitter.svg"></a>
+                <a href="https://github.com/norkskargrot"><img class="sidebarLinkIcon" src="/images/github.svg"></a>
+                <a href="https://www.linkedin.com/in/nicdocker/"><img class="sidebarLinkIcon" src="/images/linkedin.svg"></a>
+            </div>
+        </ul>
+    </div>
+</div>
+
+          </span>
+        
+        
+  <div class="content">
+    <div class="transition-content">
+      <h1 class="post-title">500 byte flight simulator</h1>
+      
+        <span class="post-date">18-05-2023</span>
+      
+      <div class="tags-container">
+        
+          <div class="tags-item">
+            Pico8
+          </div>
+        
+          <div class="tags-item">
+            Playable Demo
+          </div>
+        
+      </div>
+      <h2 id="playable-demo">Playable Demo</h2>
+<ul>
+<li>Steer using the left/right arrows.</li>
+<li>Pitch up and down using the up/down arrows.</li>
+<li>The plane has momentum, when you pitch down you will gain speed quickly, when you pitch up you'll slow again.</li>
+</ul>
+<iframe class= "pico8player" src="/blog/2023-5-18-500-byte-flightsim/plane.html"... ></iframe>
+<h2 id="the-500-bytes">The 500 bytes</h2>
+<p>Here is all of the code which makes that demo work:</p>
+<pre data-lang="lua" style="background-color:#151515;color:#e8e8d3;" class="language-lua "><code class="language-lua" data-lang="lua"><span style="color:#ffb964;">x</span><span>=</span><span style="color:#cf6a4c;">0</span><span style="color:#ffb964;">y</span><span>=</span><span style="color:#cf6a4c;">24405</span><span style="color:#ffb964;">z</span><span>=</span><span style="color:#cf6a4c;">4</span><span style="color:#ffb964;">a</span><span>=</span><span style="color:#cf6a4c;">.3</span><span style="color:#ffb964;">g</span><span>=</span><span style="color:#cf6a4c;">0</span><span style="color:#ffb964;">h</span><span>=</span><span style="color:#cf6a4c;">64</span><span style="color:#ffb964;">v</span><span>=</span><span style="color:#cf6a4c;">.2</span><span style="color:#ffb964;">q</span><span>=</span><span style="color:#cf6a4c;">127</span><span style="color:#ffb964;">w</span><span>=</span><span style="color:#cf6a4c;">16</span><span style="color:#ffb964;">p</span><span>=</span><span style="color:#ffb964;">poke2
+</span><span style="color:#ffb964;">p</span><span>(</span><span style="color:#ffb964;">y</span><span>,</span><span style="color:#cf6a4c;">0</span><span>)☉=</span><span style="color:#ffb964;">camera
+</span><span style="color:#8fbfdc;">for </span><span style="color:#ffb964;">i</span><span>=</span><span style="color:#cf6a4c;">0</span><span>,</span><span style="color:#cf6a4c;">512 </span><span style="color:#8fbfdc;">do
+</span><span style="color:#ffb964;">circfill</span><span>(</span><span style="color:#ffb964;">i</span><span>%</span><span style="color:#ffb964;">q</span><span>,</span><span style="color:#ffb964;">rnd</span><span>(</span><span style="color:#ffb964;">q</span><span>),</span><span style="color:#ffb964;">rnd</span><span>(</span><span style="color:#ffb964;">w</span><span>),</span><span style="color:#ffb964;">i</span><span>%</span><span style="color:#cf6a4c;">2</span><span>)</span><span style="color:#ffb964;">mset</span><span>(</span><span style="color:#ffb964;">i</span><span>%</span><span style="color:#ffb964;">w</span><span>,</span><span style="color:#ffb964;">i</span><span>/</span><span style="color:#ffb964;">w</span><span>,</span><span style="color:#ffb964;">i</span><span>)
+</span><span style="color:#8fbfdc;">end
+</span><span style="color:#ffb964;">pal</span><span>{</span><span style="color:#cf6a4c;">2</span><span>}</span><span style="color:#ffb964;">spr</span><span>(</span><span style="color:#cf6a4c;">0</span><span>,</span><span style="color:#cf6a4c;">2</span><span>,</span><span style="color:#cf6a4c;">2</span><span>,</span><span style="color:#ffb964;">w</span><span>,</span><span style="color:#ffb964;">w</span><span>)</span><span style="color:#ffb964;">p</span><span>(</span><span style="color:#ffb964;">y</span><span>,</span><span style="color:#cf6a4c;">96</span><span>)</span><span style="color:#ffb964;">p</span><span>(</span><span style="color:#ffb964;">y</span><span>-</span><span style="color:#cf6a4c;">29</span><span>,</span><span style="color:#cf6a4c;">4112</span><span>)::_::b=</span><span style="color:#ffb964;">btn</span><span>()</span><span style="color:#ffb964;">g</span><span>+=</span><span style="color:#ffb964;">v</span><span>*((</span><span style="color:#ffb964;">b</span><span>&amp;</span><span style="color:#cf6a4c;">2</span><span>)/</span><span style="color:#cf6a4c;">2</span><span>-(</span><span style="color:#ffb964;">b</span><span>&amp;</span><span style="color:#cf6a4c;">1</span><span>))&gt;&gt;</span><span style="color:#cf6a4c;">9</span><span style="color:#ffb964;">g</span><span>*=</span><span style="color:#cf6a4c;">.9</span><span style="color:#ffb964;">a</span><span>+=</span><span style="color:#ffb964;">g
+</span><span style="color:#ffb964;">h</span><span>+=(</span><span style="color:#ffb964;">b</span><span>&amp;</span><span style="color:#cf6a4c;">8</span><span>)/</span><span style="color:#cf6a4c;">8</span><span>-(</span><span style="color:#ffb964;">b</span><span>&amp;</span><span style="color:#cf6a4c;">4</span><span>)/</span><span style="color:#cf6a4c;">4</span><span style="color:#ffb964;">j</span><span>=</span><span style="color:#ffb964;">h</span><span>/</span><span style="color:#cf6a4c;">64</span><span>-</span><span style="color:#cf6a4c;">1</span><span style="color:#ffb964;">z</span><span>+=</span><span style="color:#ffb964;">v</span><span>*</span><span style="color:#ffb964;">sin</span><span>(</span><span style="color:#ffb964;">j</span><span>/</span><span style="color:#cf6a4c;">4</span><span>)</span><span style="color:#ffb964;">v</span><span>-=</span><span style="color:#ffb964;">j</span><span>/</span><span style="color:#cf6a4c;">40</span><span style="color:#ffb964;">s</span><span>=</span><span style="color:#ffb964;">sin</span><span>(</span><span style="color:#ffb964;">a</span><span>)</span><span style="color:#ffb964;">c</span><span>=</span><span style="color:#ffb964;">cos</span><span>(</span><span style="color:#ffb964;">a</span><span>)</span><span style="color:#ffb964;">x</span><span>-=</span><span style="color:#ffb964;">s</span><span>*</span><span style="color:#ffb964;">v
+</span><span style="color:#ffb964;">y</span><span>-=</span><span style="color:#ffb964;">c</span><span>*</span><span style="color:#ffb964;">v
+</span><span style="color:#ffb964;">k</span><span>=</span><span style="color:#ffb964;">z
+</span><span style="color:#ffb964;">cls</span><span>(</span><span style="color:#cf6a4c;">12</span><span>)</span><span style="color:#ffb964;">pal</span><span>{</span><span style="color:#cf6a4c;">7</span><span>,</span><span style="color:#cf6a4c;">6</span><span>}</span><span style="color:#8fbfdc;">for </span><span style="color:#ffb964;">i</span><span>=</span><span style="color:#cf6a4c;">0</span><span>,</span><span style="color:#ffb964;">q </span><span style="color:#8fbfdc;">do
+</span><span style="color:#8fbfdc;">if</span><span>(</span><span style="color:#ffb964;">i</span><span>==</span><span style="color:#ffb964;">h</span><span>)</span><span style="color:#ffb964;">pal</span><span>{</span><span style="color:#cf6a4c;">9</span><span>,</span><span style="color:#cf6a4c;">3</span><span>}</span><span style="color:#ffb964;">k</span><span>-=</span><span style="color:#ffb964;">w
+</span><span style="color:#ffb964;">p</span><span>=</span><span style="color:#ffb964;">k</span><span>/(</span><span style="color:#ffb964;">h</span><span>-</span><span style="color:#ffb964;">i</span><span>)*</span><span style="color:#cf6a4c;">32</span><span style="color:#ffb964;">tline</span><span>(</span><span style="color:#cf6a4c;">0</span><span>,</span><span style="color:#ffb964;">i</span><span>,</span><span style="color:#ffb964;">q</span><span>,</span><span style="color:#ffb964;">i</span><span>,</span><span style="color:#ffb964;">x</span><span>-</span><span style="color:#ffb964;">p</span><span>*</span><span style="color:#ffb964;">c</span><span>-</span><span style="color:#ffb964;">p</span><span>*</span><span style="color:#ffb964;">s</span><span>,</span><span style="color:#ffb964;">y</span><span>+</span><span style="color:#ffb964;">p</span><span>*</span><span style="color:#ffb964;">s</span><span>-</span><span style="color:#ffb964;">p</span><span>*</span><span style="color:#ffb964;">c</span><span>,</span><span style="color:#ffb964;">p</span><span>*</span><span style="color:#ffb964;">c</span><span>&gt;&gt;</span><span style="color:#cf6a4c;">6</span><span>,-</span><span style="color:#ffb964;">p</span><span>*</span><span style="color:#ffb964;">s</span><span>&gt;&gt;</span><span style="color:#cf6a4c;">6</span><span>)</span><span style="color:#8fbfdc;">end
+</span><span style="color:#ffb964;">l</span><span>=</span><span style="color:#ffb964;">g</span><span>*</span><span style="color:#cf6a4c;">999</span><span>☉(</span><span style="color:#ffb964;">l</span><span>-</span><span style="color:#cf6a4c;">64</span><span>,</span><span style="color:#ffb964;">j</span><span>*</span><span style="color:#ffb964;">w</span><span>-</span><span style="color:#cf6a4c;">80</span><span>)?</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">\b⬆️</span><span style="color:#556633;">&quot;</span><span>,</span><span style="color:#cf6a4c;">14
+</span><span style="color:#ffb964;">line</span><span>(</span><span style="color:#ffb964;">w</span><span>,</span><span style="color:#ffb964;">l</span><span>,-</span><span style="color:#ffb964;">w</span><span>,-</span><span style="color:#ffb964;">l</span><span>,</span><span style="color:#cf6a4c;">8</span><span>)?</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">¥</span><span style="color:#556633;">&quot;</span><span>,-</span><span style="color:#cf6a4c;">2</span><span>-</span><span style="color:#ffb964;">l</span><span>,</span><span style="color:#ffb964;">j</span><span>*</span><span style="color:#cf6a4c;">9
+</span><span>☉()</span><span style="color:#8fbfdc;">if</span><span>(</span><span style="color:#ffb964;">z</span><span>&gt;</span><span style="color:#ffb964;">w</span><span>)</span><span style="color:#ffb964;">run</span><span>()
+</span><span style="color:#ffb964;">flip</span><span>()</span><span style="color:#8fbfdc;">goto </span><span style="color:#ffb964;">_
+</span></code></pre>
+<p>This is looking entirely illegible, so how did it get to this point? </p>
+<h2 id="the-vision">The Vision</h2>
+<p>Since the 'tline' function had been added to Pico8, I have been wanting to create something that uses it's potential. This function allows drawing textured lines from the map data, with dramatically faster performance than you might expect from Pico8. Some of the most practical uses I have seen of this is for 2d sprite rotation, textured polygon drawing, and mode7-style plane rendering, for floors and roofs with a distinct 3d appearance. On hearing about the Tweet-Tweet Jam, a challenge to create a game in 500 characters of code, I took this as an opportunity to explore.</p>
+<h2 id="making-some-noise">Making some noise</h2>
+<p>Before we can draw some 3d clouds or land, we need an image to draw. In my previous Pico8-projects I have created noise for terrain shapes or clouds via a number of methods, including placing random points and blurring them, placing points and bilinearly sampling between them, trig function based 'plasma', and more. All of these were far too large for the code size limitations, however, so I took an easy fallback: drawing plenty of randomly placed circles.</p>
+<p>To improve the look of the final image to be drawn, I wanted to add a second color. This would become the light edge highlight on the clouds, and the sandy shores on the ground's islands. To achieve this, after drawing the circles, I then draw the whole spritesheet onto itself in a second colour, with a slight offset.</p>
+<p>Using tline also requires that our data to be drawn exists in the map data, rather than just the sprite sheet, so with the following code we both draw our circles and put our sprites into the map data.</p>
+<pre data-lang="lua" style="background-color:#151515;color:#e8e8d3;" class="language-lua "><code class="language-lua" data-lang="lua"><span style="color:#ffb964;">poke</span><span>(</span><span style="color:#cf6a4c;">0x5F55</span><span>,</span><span style="color:#cf6a4c;">0</span><span>) </span><span style="color:#888888;">-- Set the draw state to draw into the sprite sheet, rather than to the screen
+</span><span>
+</span><span style="color:#888888;">-- Draw 1000 circles with a random size (0-16 pixels) and color (0 or 1)
+</span><span style="color:#8fbfdc;">for </span><span style="color:#ffb964;">i</span><span>=</span><span style="color:#cf6a4c;">0</span><span>,</span><span style="color:#cf6a4c;">999 </span><span style="color:#8fbfdc;">do
+</span><span>    </span><span style="color:#ffb964;">circfill</span><span>(</span><span style="color:#ffb964;">rnd</span><span>(</span><span style="color:#cf6a4c;">128</span><span>),</span><span style="color:#ffb964;">rnd</span><span>(</span><span style="color:#cf6a4c;">128</span><span>),</span><span style="color:#ffb964;">rnd</span><span>(</span><span style="color:#cf6a4c;">16</span><span>),</span><span style="color:#ffb964;">rnd</span><span>(</span><span style="color:#cf6a4c;">2</span><span>))
+</span><span style="color:#8fbfdc;">end
+</span><span>
+</span><span style="color:#ffb964;">pal</span><span>({</span><span style="color:#cf6a4c;">2</span><span>}) </span><span style="color:#888888;">-- Change colour to create edge highlights
+</span><span style="color:#ffb964;">spr</span><span>(</span><span style="color:#cf6a4c;">0</span><span>,</span><span style="color:#cf6a4c;">2</span><span>,</span><span style="color:#cf6a4c;">2</span><span>,</span><span style="color:#cf6a4c;">16</span><span>,</span><span style="color:#cf6a4c;">16</span><span>) </span><span style="color:#888888;">-- Draw the whole spritesheet with an offset
+</span><span>
+</span><span style="color:#888888;">-- Set the required map data
+</span><span style="color:#8fbfdc;">for </span><span style="color:#ffb964;">i</span><span>=</span><span style="color:#cf6a4c;">0</span><span>,</span><span style="color:#cf6a4c;">256 </span><span style="color:#8fbfdc;">do
+</span><span>    </span><span style="color:#ffb964;">mset</span><span>(</span><span style="color:#ffb964;">i</span><span>%</span><span style="color:#cf6a4c;">16</span><span>,</span><span style="color:#ffb964;">i</span><span>/</span><span style="color:#cf6a4c;">16</span><span>,</span><span style="color:#ffb964;">i</span><span>)
+</span><span style="color:#8fbfdc;">end
+</span><span>
+</span><span style="color:#ffb964;">poke</span><span>(</span><span style="color:#cf6a4c;">0x5F55</span><span>,</span><span style="color:#cf6a4c;">0x60</span><span>) </span><span style="color:#888888;">-- Reset the draw state to draw into the screen instead of the spritesheet
+</span><span style="color:#ffb964;">poke2</span><span>(</span><span style="color:#cf6a4c;">0x5F38</span><span>,</span><span style="color:#cf6a4c;">0x1010</span><span>) </span><span style="color:#888888;">-- Set the tiling used by tline, so that the map repeats every 16 tiles
+</span></code></pre>
+<p>This creates this lovely generated image which the rest of the graphics rely on. This texture doesn't tile, but fixing that took up far too many bytes of code for me to worry about it. The colours we will pallette-swap into something more sensible later.</p>
+<img class = smallimagewithinpost src="/blog/2023-5-18-500-byte-flightsim/noise.png">
+<p>Some changes were made to this initial generation code to squeeze down it's size from what we see above, including:</p>
+<ul>
+<li>Moving into a single for loop, iterating 512 times (the maximum we can before the map pokes start hitting data we don't want it to).</li>
+<li>Changing some values and functions to shorter variable names (q=127 w=16 and y=24405).</li>
+<li>Creating a variable for poke2 (two of our pokes are single pokes, rather than poking two bytes, but we can save characters by using a variablised poke2 instead)</li>
+<li>Moving from hex values to decimal (eliminating the 0x prefix).</li>
+<li>Removing one set of brackets from the pal({2}) call, a trick which I heard from Pico8 expert @FSouchu on Twitter.</li>
+<li>Changing one call of rnd(q) to i%q  and the colour randomisation to i%2 in the circle drawing, the visual difference of which is barely noticeable.</li>
+</ul>
+<p>This leaves us with our final image creation code:</p>
+<pre data-lang="lua" style="background-color:#151515;color:#e8e8d3;" class="language-lua "><code class="language-lua" data-lang="lua"><span style="color:#ffb964;">p</span><span>(</span><span style="color:#ffb964;">y</span><span>,</span><span style="color:#cf6a4c;">0</span><span>)  
+</span><span style="color:#8fbfdc;">for </span><span style="color:#ffb964;">i</span><span>=</span><span style="color:#cf6a4c;">0</span><span>,</span><span style="color:#cf6a4c;">512 </span><span style="color:#8fbfdc;">do
+</span><span style="color:#ffb964;">circfill</span><span>(</span><span style="color:#ffb964;">i</span><span>%</span><span style="color:#ffb964;">q</span><span>,</span><span style="color:#ffb964;">rnd</span><span>(</span><span style="color:#ffb964;">q</span><span>),</span><span style="color:#ffb964;">rnd</span><span>(</span><span style="color:#ffb964;">w</span><span>),</span><span style="color:#ffb964;">i</span><span>%</span><span style="color:#cf6a4c;">2</span><span>)</span><span style="color:#ffb964;">mset</span><span>(</span><span style="color:#ffb964;">i</span><span>%</span><span style="color:#ffb964;">w</span><span>,</span><span style="color:#ffb964;">i</span><span>/</span><span style="color:#ffb964;">w</span><span>,</span><span style="color:#ffb964;">i</span><span>)
+</span><span style="color:#8fbfdc;">end
+</span><span style="color:#ffb964;">pal</span><span>{</span><span style="color:#cf6a4c;">2</span><span>}</span><span style="color:#ffb964;">spr</span><span>(</span><span style="color:#cf6a4c;">0</span><span>,</span><span style="color:#cf6a4c;">2</span><span>,</span><span style="color:#cf6a4c;">2</span><span>,</span><span style="color:#ffb964;">w</span><span>,</span><span style="color:#ffb964;">w</span><span>)</span><span style="color:#ffb964;">p</span><span>(</span><span style="color:#ffb964;">y</span><span>,</span><span style="color:#cf6a4c;">96</span><span>)</span><span style="color:#ffb964;">p</span><span>(</span><span style="color:#ffb964;">y</span><span>-</span><span style="color:#cf6a4c;">29</span><span>,</span><span style="color:#cf6a4c;">4112</span><span>)
+</span></code></pre>
+<h2 id="diving-into-tline">Diving into tline</h2>
+<p>The code which I started with for drawing clouds is below:</p>
+<pre data-lang="lua" style="background-color:#151515;color:#e8e8d3;" class="language-lua "><code class="language-lua" data-lang="lua"><span style="color:#888888;">--[[ Variables
+</span><span style="color:#888888;">s: the scale of the clouds
+</span><span style="color:#888888;">a: the rotation of the view (about the vertical axis)
+</span><span style="color:#888888;">h: the horizon line
+</span><span style="color:#888888;">x,y,z: the position of the view
+</span><span style="color:#888888;">]]--
+</span><span>
+</span><span style="color:#ffb964;">cls</span><span>(</span><span style="color:#cf6a4c;">12</span><span>) </span><span style="color:#888888;">-- Fill the screen with blue
+</span><span style="color:#ffb964;">pal</span><span>({</span><span style="color:#cf6a4c;">7</span><span>,</span><span style="color:#cf6a4c;">6</span><span>}) </span><span style="color:#888888;">-- Palette swap our blue and maroon texture to more appropriate cloud colours
+</span><span style="color:#8fbfdc;">for </span><span style="color:#ffb964;">i</span><span>=</span><span style="color:#cf6a4c;">0</span><span>,</span><span style="color:#ffb964;">h </span><span style="color:#8fbfdc;">do </span><span style="color:#888888;">-- Draw tlines from the top of the screen to the horizon line
+</span><span>    </span><span style="color:#ffb964;">p</span><span>=</span><span style="color:#ffb964;">z</span><span>/(</span><span style="color:#ffb964;">h</span><span>-</span><span style="color:#ffb964;">i</span><span>)
+</span><span>    </span><span style="color:#ffb964;">sap</span><span>,</span><span style="color:#ffb964;">cap</span><span>=</span><span style="color:#ffb964;">sin</span><span>(</span><span style="color:#ffb964;">a</span><span>)*</span><span style="color:#ffb964;">p</span><span>*</span><span style="color:#ffb964;">s</span><span>,</span><span style="color:#ffb964;">cos</span><span>(</span><span style="color:#ffb964;">a</span><span>)*</span><span style="color:#ffb964;">p</span><span>*</span><span style="color:#ffb964;">s
+</span><span>
+</span><span>    </span><span style="color:#888888;">-- The coords of the left and right points at the screen edges
+</span><span>    </span><span style="color:#ffb964;">lx</span><span>=(-</span><span style="color:#ffb964;">cap</span><span>-</span><span style="color:#ffb964;">sap</span><span>)+</span><span style="color:#ffb964;">x
+</span><span>    </span><span style="color:#ffb964;">ly</span><span>=(</span><span style="color:#ffb964;">sap</span><span>-</span><span style="color:#ffb964;">cap</span><span>)+</span><span style="color:#ffb964;">y
+</span><span>    </span><span style="color:#ffb964;">rx</span><span>=(</span><span style="color:#ffb964;">cap</span><span>-</span><span style="color:#ffb964;">sap</span><span>)+</span><span style="color:#ffb964;">x
+</span><span>    </span><span style="color:#ffb964;">ry</span><span>=(-</span><span style="color:#ffb964;">sap</span><span>-</span><span style="color:#ffb964;">cap</span><span>)+</span><span style="color:#ffb964;">y
+</span><span>
+</span><span>    </span><span style="color:#888888;">-- The gradient of the tline in map space
+</span><span>    </span><span style="color:#ffb964;">dx</span><span>=(</span><span style="color:#ffb964;">rx</span><span>-</span><span style="color:#ffb964;">lx</span><span>)/</span><span style="color:#cf6a4c;">128
+</span><span>    </span><span style="color:#ffb964;">dy</span><span>=(</span><span style="color:#ffb964;">ry</span><span>-</span><span style="color:#ffb964;">ly</span><span>)/</span><span style="color:#cf6a4c;">128
+</span><span>
+</span><span>    </span><span style="color:#888888;">-- Draw the line across the width of the screen
+</span><span>    </span><span style="color:#ffb964;">tline</span><span>(</span><span style="color:#cf6a4c;">0</span><span>,</span><span style="color:#ffb964;">i</span><span>,</span><span style="color:#cf6a4c;">127</span><span>,</span><span style="color:#ffb964;">i</span><span>,</span><span style="color:#ffb964;">lx</span><span>,</span><span style="color:#ffb964;">ly</span><span>,</span><span style="color:#ffb964;">dx</span><span>,</span><span style="color:#ffb964;">dy</span><span>)
+</span><span style="color:#8fbfdc;">end
+</span><span style="color:#ffb964;">pal</span><span>() </span><span style="color:#888888;">-- Reset the draw palette
+</span></code></pre>
+<p>Initially I looped through this twice, once to draw the clouds and a second time to draw the ground, but as I played around with the movement, I realised something interesting. If you kept drawing past the horizon line, the view would &quot;flip&quot;, as p became negative. This would flip the drawing of the lines, effectively creating a second plane of clouds below the first. The issue was, as the player's z coordinate changed both planes would appear to approach or recede together, braking the illusion of moving between two planes. This can be seen in this gif:</p>
+<img class = smallimagewithinpost src="/blog/2023-5-18-500-byte-flightsim/doubleclouds.gif"> 
+<p>By subtracting a value from the player's z coordinate at the drawing point of the horizon line, it was possible to have the planes appear to recede or approach together. Combined with a pallette swap at the horizon line, both the clouds and land can be drawn very simply and with a very low character count:</p>
+<img class = smallimagewithinpost src="/blog/2023-5-18-500-byte-flightsim/cloudsandland.gif"> 
+<p>The illusion still breaks entirely if the player leaves the vertical boundaries of the world, seen in the gif below, but in the final game this was avoided by first making sure the player never has enough momentum to fly above the cloudline, and second by causing them to crash and restart if they would go below the ground plane.</p>
+<img class = smallimagewithinpost src="/blog/2023-5-18-500-byte-flightsim/breakingverticalbounries.gif"> 
+<p>From here a lot of the above drawing logic can be squeezed down and simplified with just algebra which, combined with some of the code-shrinking techniques described above, results in the following code for drawing the environment:</p>
+<pre data-lang="lua" style="background-color:#151515;color:#e8e8d3;" class="language-lua "><code class="language-lua" data-lang="lua"><span style="color:#ffb964;">s</span><span>=</span><span style="color:#ffb964;">sin</span><span>(</span><span style="color:#ffb964;">a</span><span>)</span><span style="color:#ffb964;">c</span><span>=</span><span style="color:#ffb964;">cos</span><span>(</span><span style="color:#ffb964;">a</span><span>)</span><span style="color:#ffb964;">k</span><span>=</span><span style="color:#ffb964;">z
+</span><span style="color:#ffb964;">cls</span><span>(</span><span style="color:#cf6a4c;">12</span><span>)</span><span style="color:#ffb964;">pal</span><span>{</span><span style="color:#cf6a4c;">7</span><span>,</span><span style="color:#cf6a4c;">6</span><span>}</span><span style="color:#8fbfdc;">for </span><span style="color:#ffb964;">i</span><span>=</span><span style="color:#cf6a4c;">0</span><span>,</span><span style="color:#ffb964;">q </span><span style="color:#8fbfdc;">do
+</span><span style="color:#8fbfdc;">if</span><span>(</span><span style="color:#ffb964;">i</span><span>==</span><span style="color:#ffb964;">h</span><span>)</span><span style="color:#ffb964;">pal</span><span>{</span><span style="color:#cf6a4c;">9</span><span>,</span><span style="color:#cf6a4c;">3</span><span>}</span><span style="color:#ffb964;">k</span><span>-=</span><span style="color:#ffb964;">w
+</span><span style="color:#ffb964;">p</span><span>=</span><span style="color:#ffb964;">k</span><span>/(</span><span style="color:#ffb964;">h</span><span>-</span><span style="color:#ffb964;">i</span><span>)*</span><span style="color:#cf6a4c;">32</span><span style="color:#ffb964;">tline</span><span>(</span><span style="color:#cf6a4c;">0</span><span>,</span><span style="color:#ffb964;">i</span><span>,</span><span style="color:#ffb964;">q</span><span>,</span><span style="color:#ffb964;">i</span><span>,</span><span style="color:#ffb964;">x</span><span>-</span><span style="color:#ffb964;">p</span><span>*</span><span style="color:#ffb964;">c</span><span>-</span><span style="color:#ffb964;">p</span><span>*</span><span style="color:#ffb964;">s</span><span>,</span><span style="color:#ffb964;">y</span><span>+</span><span style="color:#ffb964;">p</span><span>*</span><span style="color:#ffb964;">s</span><span>-</span><span style="color:#ffb964;">p</span><span>*</span><span style="color:#ffb964;">c</span><span>,</span><span style="color:#ffb964;">p</span><span>*</span><span style="color:#ffb964;">c</span><span>&gt;&gt;</span><span style="color:#cf6a4c;">6</span><span>,-</span><span style="color:#ffb964;">p</span><span>*</span><span style="color:#ffb964;">s</span><span>&gt;&gt;</span><span style="color:#cf6a4c;">6</span><span>)</span><span style="color:#8fbfdc;">end
+</span></code></pre>
+<h2 id="starting-soaring">Starting Soaring</h2>
+<p>The clear next step is giving the player an interesting way to traverse this environment; it's meant to be a game after all. I liked the idea of gliding mechanics, as flying seemed like the best way to provide vertical mobility, showing off the best parts of the environment rendering. I also personally thought it would be more interesting than powered plane flight.</p>
+<p>My original vision for the game was to be first-person, as while I thought it would be better as a third-person game, I was skeptical I would have code space left to draw a character. This turned out to be wrong as I continued to squeeze down the character count, which I am very pleased about. A side effect of this is that the controls actually work as though it's a first person game, with the view rotating about the camera, effectively also moving the player also, rather than it rotating about the player. This saves on characters and isn't noticeable in the final product unless you look for it.</p>
+<p>The expanded movement logic is as follows:</p>
+<pre data-lang="lua" style="background-color:#151515;color:#e8e8d3;" class="language-lua "><code class="language-lua" data-lang="lua"><span style="color:#888888;">--[[ Variables
+</span><span style="color:#888888;">a: the rotation of the view (about the vertical axis)
+</span><span style="color:#888888;">g: the rate of change of a
+</span><span style="color:#888888;">h: the horizon line (effectively the pitch of the player&#39;s view)
+</span><span style="color:#888888;">v: the player&#39;s current speed
+</span><span style="color:#888888;">x,y,z: the position of the player
+</span><span style="color:#888888;">]]--
+</span><span>
+</span><span style="color:#888888;">-- The x axis of player input
+</span><span style="color:#ffb964;">ix</span><span>=</span><span style="color:#cf6a4c;">0
+</span><span style="color:#8fbfdc;">if </span><span>(</span><span style="color:#ffb964;">btn</span><span>(</span><span style="color:#cf6a4c;">0</span><span>)) </span><span style="color:#ffb964;">ix</span><span>-=</span><span style="color:#cf6a4c;">1
+</span><span style="color:#8fbfdc;">if </span><span>(</span><span style="color:#ffb964;">btn</span><span>(</span><span style="color:#cf6a4c;">1</span><span>)) </span><span style="color:#ffb964;">ix</span><span>+=</span><span style="color:#cf6a4c;">1
+</span><span>
+</span><span style="color:#888888;">-- The y axis of player input
+</span><span style="color:#ffb964;">iy</span><span>=</span><span style="color:#cf6a4c;">0
+</span><span style="color:#8fbfdc;">if </span><span>(</span><span style="color:#ffb964;">btn</span><span>(</span><span style="color:#cf6a4c;">2</span><span>)) </span><span style="color:#ffb964;">iy</span><span>-=</span><span style="color:#cf6a4c;">1
+</span><span style="color:#8fbfdc;">if </span><span>(</span><span style="color:#ffb964;">btn</span><span>(</span><span style="color:#cf6a4c;">3</span><span>)) </span><span style="color:#ffb964;">iy</span><span>+=</span><span style="color:#cf6a4c;">1
+</span><span>
+</span><span style="color:#888888;">-- Update the rotation of the view based on the x-input and current speed
+</span><span style="color:#ffb964;">g</span><span>+=</span><span style="color:#ffb964;">v</span><span>*</span><span style="color:#ffb964;">ix</span><span>/</span><span style="color:#cf6a4c;">512
+</span><span style="color:#ffb964;">g</span><span>*=</span><span style="color:#cf6a4c;">.9
+</span><span style="color:#ffb964;">a</span><span>+=</span><span style="color:#ffb964;">g
+</span><span>
+</span><span style="color:#888888;">-- Update the pitch/horizon line based on the y-input
+</span><span style="color:#ffb964;">h</span><span>+=</span><span style="color:#ffb964;">iy
+</span><span>
+</span><span style="color:#888888;">-- Update the z position based on the current pitch and speed
+</span><span style="color:#ffb964;">j</span><span>=</span><span style="color:#ffb964;">h</span><span>/</span><span style="color:#cf6a4c;">64</span><span>-</span><span style="color:#cf6a4c;">1
+</span><span style="color:#ffb964;">z</span><span>+=</span><span style="color:#ffb964;">v</span><span>*</span><span style="color:#ffb964;">sin</span><span>(</span><span style="color:#ffb964;">j</span><span>/</span><span style="color:#cf6a4c;">4</span><span>)
+</span><span>
+</span><span style="color:#888888;">-- Update the speed based on the current pitch
+</span><span style="color:#ffb964;">v</span><span>-=</span><span style="color:#ffb964;">j</span><span>/</span><span style="color:#cf6a4c;">40
+</span><span>
+</span><span style="color:#888888;">-- Update the player&#39;s position based on the current angle and speed
+</span><span style="color:#ffb964;">s</span><span>=</span><span style="color:#ffb964;">sin</span><span>(</span><span style="color:#ffb964;">a</span><span>)</span><span style="color:#ffb964;">c</span><span>=</span><span style="color:#ffb964;">cos</span><span>(</span><span style="color:#ffb964;">a</span><span>)
+</span><span style="color:#ffb964;">x</span><span>-=</span><span style="color:#ffb964;">s</span><span>*</span><span style="color:#ffb964;">v
+</span><span style="color:#ffb964;">y</span><span>-=</span><span style="color:#ffb964;">c</span><span>*</span><span style="color:#ffb964;">v
+</span></code></pre>
+<p>There many issues with this flight model, but I think it found a good balance between how good it feels to fly, code size, and some semblance of realism. There wasn't a tonne that could be done here to compress the code size, but the biggest saving was the change from using btn() and if statements to get the player input, to instead use a single btn() call, returning a bitfield of inputs, and bitwise operations. With this, and the removal of a lot of whitespace, the final compressed code became:</p>
+<pre data-lang="lua" style="background-color:#151515;color:#e8e8d3;" class="language-lua "><code class="language-lua" data-lang="lua"><span style="color:#ffb964;">b</span><span>=</span><span style="color:#ffb964;">btn</span><span>()</span><span style="color:#ffb964;">g</span><span>+=</span><span style="color:#ffb964;">v</span><span>*((</span><span style="color:#ffb964;">b</span><span>&amp;</span><span style="color:#cf6a4c;">2</span><span>)/</span><span style="color:#cf6a4c;">2</span><span>-(</span><span style="color:#ffb964;">b</span><span>&amp;</span><span style="color:#cf6a4c;">1</span><span>))&gt;&gt;</span><span style="color:#cf6a4c;">9</span><span style="color:#ffb964;">g</span><span>*=</span><span style="color:#cf6a4c;">.9</span><span style="color:#ffb964;">a</span><span>+=</span><span style="color:#ffb964;">g
+</span><span style="color:#ffb964;">h</span><span>+=(</span><span style="color:#ffb964;">b</span><span>&amp;</span><span style="color:#cf6a4c;">8</span><span>)/</span><span style="color:#cf6a4c;">8</span><span>-(</span><span style="color:#ffb964;">b</span><span>&amp;</span><span style="color:#cf6a4c;">4</span><span>)/</span><span style="color:#cf6a4c;">4</span><span style="color:#ffb964;">j</span><span>=</span><span style="color:#ffb964;">h</span><span>/</span><span style="color:#cf6a4c;">64</span><span>-</span><span style="color:#cf6a4c;">1</span><span style="color:#ffb964;">z</span><span>+=</span><span style="color:#ffb964;">v</span><span>*</span><span style="color:#ffb964;">sin</span><span>(</span><span style="color:#ffb964;">j</span><span>/</span><span style="color:#cf6a4c;">4</span><span>)</span><span style="color:#ffb964;">v</span><span>-=</span><span style="color:#ffb964;">j</span><span>/</span><span style="color:#cf6a4c;">40</span><span style="color:#ffb964;">s</span><span>=</span><span style="color:#ffb964;">sin</span><span>(</span><span style="color:#ffb964;">a</span><span>)</span><span style="color:#ffb964;">c</span><span>=</span><span style="color:#ffb964;">cos</span><span>(</span><span style="color:#ffb964;">a</span><span>)</span><span style="color:#ffb964;">x</span><span>-=</span><span style="color:#ffb964;">s</span><span>*</span><span style="color:#ffb964;">v
+</span><span style="color:#ffb964;">y</span><span>-=</span><span style="color:#ffb964;">c</span><span>*</span><span style="color:#ffb964;">v
+</span><span style="color:#ffb964;">k</span><span>=</span><span style="color:#ffb964;">z
+</span></code></pre>
+<h2 id="drawing-a-plane">Drawing a plane</h2>
+<p>It was a very pleasant surprise when I realised that I would have space to include a plane, as I think it significantly improved both the look and feel of the game, even when it came at the cost of some other features like a properly tiling texture. The plane went through many iterations of visuals, with the earliest version, close to the final product, as follows:</p>
+<pre data-lang="lua" style="background-color:#151515;color:#e8e8d3;" class="language-lua "><code class="language-lua" data-lang="lua"><span style="color:#ffb964;">xd</span><span>=</span><span style="color:#cf6a4c;">64</span><span>-</span><span style="color:#ffb964;">g</span><span>*</span><span style="color:#cf6a4c;">999 </span><span style="color:#888888;">-- the x-coord to draw the plane at
+</span><span style="color:#ffb964;">yd</span><span>=</span><span style="color:#cf6a4c;">80</span><span>-</span><span style="color:#ffb964;">j</span><span>*</span><span style="color:#ffb964;">w </span><span style="color:#888888;">-- the y-coord to draw the plane at
+</span><span>
+</span><span style="color:#888888;">--x and y offset for the plane&#39;s wing tips based on the player&#39;s current rate of turning
+</span><span style="color:#ffb964;">l</span><span>=</span><span style="color:#ffb964;">w</span><span>*</span><span style="color:#ffb964;">cos</span><span>(</span><span style="color:#ffb964;">g</span><span>*</span><span style="color:#ffb964;">w</span><span>)
+</span><span style="color:#ffb964;">k</span><span>=</span><span style="color:#ffb964;">w</span><span>*</span><span style="color:#ffb964;">sin</span><span>(</span><span style="color:#ffb964;">g</span><span>*</span><span style="color:#ffb964;">w</span><span>)
+</span><span>
+</span><span style="color:#888888;">-- drawing the wings
+</span><span style="color:#ffb964;">line</span><span>(</span><span style="color:#ffb964;">xd</span><span>+</span><span style="color:#ffb964;">l</span><span>,</span><span style="color:#ffb964;">yd</span><span>-</span><span style="color:#ffb964;">k</span><span>,</span><span style="color:#ffb964;">xd</span><span>-</span><span style="color:#ffb964;">l</span><span>,</span><span style="color:#ffb964;">yd</span><span>+</span><span style="color:#ffb964;">k</span><span>,</span><span style="color:#cf6a4c;">8</span><span>)
+</span><span style="color:#ffb964;">line</span><span>(</span><span style="color:#ffb964;">xd</span><span>+</span><span style="color:#ffb964;">l</span><span>,</span><span style="color:#ffb964;">yd</span><span>-</span><span style="color:#ffb964;">k</span><span>-</span><span style="color:#cf6a4c;">1</span><span>,</span><span style="color:#ffb964;">xd</span><span>-</span><span style="color:#ffb964;">l</span><span>,</span><span style="color:#ffb964;">yd</span><span>+</span><span style="color:#ffb964;">k</span><span>-</span><span style="color:#cf6a4c;">1</span><span>,</span><span style="color:#cf6a4c;">14</span><span>)
+</span><span>
+</span><span style="color:#888888;">-- drawing the main cabin
+</span><span>print(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">⬆️</span><span style="color:#556633;">&quot;</span><span>,</span><span style="color:#ffb964;">xd</span><span>-</span><span style="color:#cf6a4c;">3</span><span>,</span><span style="color:#ffb964;">yd</span><span>-</span><span style="color:#cf6a4c;">3</span><span>,</span><span style="color:#cf6a4c;">14</span><span>)
+</span><span>
+</span><span style="color:#888888;">--drawing the tail
+</span><span style="color:#ffb964;">line</span><span>(</span><span style="color:#ffb964;">xd</span><span>,</span><span style="color:#ffb964;">yd</span><span>,</span><span style="color:#ffb964;">xd</span><span>-</span><span style="color:#ffb964;">g</span><span>*</span><span style="color:#cf6a4c;">500</span><span>,</span><span style="color:#ffb964;">yd</span><span>+</span><span style="color:#ffb964;">j</span><span>*</span><span style="color:#cf6a4c;">5</span><span>+</span><span style="color:#cf6a4c;">4</span><span>,</span><span style="color:#cf6a4c;">14</span><span>)
+</span><span>print(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">¥</span><span style="color:#556633;">&quot;</span><span>,</span><span style="color:#ffb964;">xd</span><span>-</span><span style="color:#cf6a4c;">1</span><span>-</span><span style="color:#ffb964;">g</span><span>*</span><span style="color:#cf6a4c;">500</span><span>,</span><span style="color:#ffb964;">yd</span><span>+</span><span style="color:#ffb964;">j</span><span>*</span><span style="color:#cf6a4c;">5</span><span>,</span><span style="color:#cf6a4c;">8</span><span>)
+</span></code></pre>
+<p>Which resulted in quite a nice looking plane effect:</p>
+<img class = smallimagewithinpost src="/blog/2023-5-18-500-byte-flightsim/planeinitial.gif"> 
+<p>Quite a lot of changes were required, however, to get this to fit into a smaller size, including:</p>
+<ul>
+<li>Removing one of the plane's wing lines (this was a significant cost to the visuals sadly, but saved a good lot of tokens).</li>
+<li>Changing the logic for drawing the plane's wing to remove the use of sin and cos. This means that the length of the wing now changes with the angle it's drawn at but I don't think it matters significantly.</li>
+<li>Removing the plane's tail line (which was not particularly noticeable anyway).</li>
+<li>Removing the variables for the position of the plane on-screen, and instead using a call to the camera function so objects could be drawn at 0,0.</li>
+<li>Changing print functions to use the '?' syntax</li>
+<li>Removing the colour parameter from many of the drawing functions, as pico8 will draw objects in the last used colour if one isn't specified.</li>
+<li>Using the control code &quot;\b&quot; to position the body of the plane, instead of coordinates</li>
+</ul>
+<p>All of these changes allowed for huge code compression when drawing the plane:</p>
+<pre data-lang="lua" style="background-color:#151515;color:#e8e8d3;" class="language-lua "><code class="language-lua" data-lang="lua"><span>☉=</span><span style="color:#ffb964;">camera
+</span><span style="color:#ffb964;">l</span><span>=</span><span style="color:#ffb964;">g</span><span>*</span><span style="color:#cf6a4c;">999</span><span>☉(</span><span style="color:#ffb964;">l</span><span>-</span><span style="color:#cf6a4c;">64</span><span>,</span><span style="color:#ffb964;">j</span><span>*</span><span style="color:#ffb964;">w</span><span>-</span><span style="color:#cf6a4c;">80</span><span>)?</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">\b⬆️</span><span style="color:#556633;">&quot;</span><span>,</span><span style="color:#cf6a4c;">14
+</span><span style="color:#ffb964;">line</span><span>(</span><span style="color:#ffb964;">w</span><span>,</span><span style="color:#ffb964;">l</span><span>,-</span><span style="color:#ffb964;">w</span><span>,-</span><span style="color:#ffb964;">l</span><span>,</span><span style="color:#cf6a4c;">8</span><span>)?</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">¥</span><span style="color:#556633;">&quot;</span><span>,-</span><span style="color:#cf6a4c;">2</span><span>-</span><span style="color:#ffb964;">l</span><span>,</span><span style="color:#ffb964;">j</span><span>*</span><span style="color:#cf6a4c;">9
+</span><span>☉()
+</span></code></pre>
+<h2 id="final-touches">Final Touches</h2>
+<p>The last little bits of code in this demo are the main loop, which uses the classic Pico8 trick of goto and labels to replace an update function, and the game reset, done with a check to see if the player has hit the ground.</p>
+<pre data-lang="lua" style="background-color:#151515;color:#e8e8d3;" class="language-lua "><code class="language-lua" data-lang="lua"><span style="color:#8fbfdc;">if</span><span>(</span><span style="color:#ffb964;">z</span><span>&gt;</span><span style="color:#ffb964;">w</span><span>)</span><span style="color:#ffb964;">run</span><span>()
+</span></code></pre>
+<p>Previously I also included a reset if the player was flying backwards (v&lt;0), representing a restart due to stalling, but it consumed a few valuable characters.</p>
+<img class = smallimagewithinpost src="/blog/2023-5-18-500-byte-flightsim/plane.gif">
+<p>If you got here, thanks for reading! All in all this jam was a fantastic opportunity to explore tiny sized code where every character counts, and I would highly recommend trying out a similar jam if you haven't!</p>
+
+    </div>
+  </div>
+
+      </div>
+    </body>
+
+</html>
